@@ -2,7 +2,7 @@
   "name": "windowport",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://lsybuilds.github.io/Simple_Kiosk/",
+  "homepage": "https://lsybuilds.github.io/windowStyle_portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
