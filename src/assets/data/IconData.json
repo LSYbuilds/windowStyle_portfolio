@@ -1,0 +1,39 @@
+{
+  "iconDateList": [
+    {
+      "id": "1",
+      "title": "내 컴퓨터",
+      "src": "/icon/MyComputer.png"
+    },
+    {
+      "id": "2",
+      "title": "인터넷",
+      "src": "/icon/InternetExplorer6.png"
+    },
+    {
+      "id": "3",
+      "title": "내 문서",
+      "src": "/icon/MyDocuments.png"
+    },
+    {
+      "id": "4",
+      "title": "휴지통",
+      "src": "/icon/RecycleBin.png"
+    },
+    {
+      "id": "5",
+      "title": "음악",
+      "src": "/icon/MyMusic.png"
+    },
+    {
+      "id": "5",
+      "title": "사진",
+      "src": "/icon/MyPictures.png"
+    },
+    {
+      "id": "5",
+      "title": "영상",
+      "src": "/icon/MyVideos.png"
+    }
+  ]
+}

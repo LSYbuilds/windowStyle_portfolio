@@ -16,11 +16,10 @@ export const OverViewWrap = styled.div`
     height: 100%;
     min-height: 100vh;
     .computer_box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
       height: 800px;
     }
 
@@ -53,10 +52,6 @@ export const OverViewWrap = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       z-index: 999;
       width: 150px;
       height: 150px;
@@ -73,6 +68,13 @@ export const OverViewWrap = styled.div`
       &:hover {
         box-shadow: 1px 1px 15px 10px #fff;
       }
+    }
+    .intro_skip {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
     }
   }
 `;
