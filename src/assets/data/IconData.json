@@ -1,5 +1,5 @@
 {
-  "iconDateList": [
+  "iconDataList": [
     {
       "id": "1",
       "title": "내 컴퓨터",
@@ -26,14 +26,29 @@
       "src": "/icon/MyMusic.png"
     },
     {
-      "id": "5",
+      "id": "6",
       "title": "사진",
       "src": "/icon/MyPictures.png"
     },
     {
-      "id": "5",
+      "id": "7",
       "title": "영상",
       "src": "/icon/MyVideos.png"
+    },
+    {
+      "id": "8",
+      "title": "게임메카",
+      "src": "/icon/gameMeca.png"
+    },
+    {
+      "id": "9",
+      "title": "부산광역시",
+      "src": "/icon/busan.png"
+    },
+    {
+      "id": "10",
+      "title": "BangBoo키오스크",
+      "src": "/icon/bangboo.png"
     }
   ]
 }

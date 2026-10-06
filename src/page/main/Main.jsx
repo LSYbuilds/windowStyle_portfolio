@@ -24,7 +24,7 @@ const Main = () => {
           />
         )}
       </AnimatePresence>
-      <WindowView></WindowView>
+      <WindowView />
     </MainWrap>
   );
 };
