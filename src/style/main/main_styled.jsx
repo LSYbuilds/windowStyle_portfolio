@@ -1,9 +1,13 @@
 import styled from "@emotion/styled";
 
+const publicPath = (path) => {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+};
+
 export const MainWrap = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url(/bg/windowBg.jpg);
+  background-image: url(${publicPath("/bg/windowBg.jpg")});
   background-repeat: no-repeat;
   .fade_bg {
     position: fixed;

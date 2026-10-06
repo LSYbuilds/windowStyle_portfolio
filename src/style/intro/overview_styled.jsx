@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
 
+const publicPath = (path) => {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+};
 export const OverViewWrap = styled.div`
   width: 100%;
   height: 100%;
@@ -25,7 +28,8 @@ export const OverViewWrap = styled.div`
       content: "";
       position: absolute;
       inset: 0;
-      background: url("/bg/Computer_Case_Front.png") center / contain no-repeat;
+      background: url(${publicPath("/bg/Computer_Case_Front.png")}) center /
+        contain no-repeat;
       opacity: 0.5;
       filter: blur(2px);
       -webkit-mask-image: radial-gradient(

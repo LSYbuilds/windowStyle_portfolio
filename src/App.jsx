@@ -4,7 +4,7 @@ import { Wrap } from "./style/layout_styled";
 import Introlayout from "./components/leyout/intro_layout";
 import Mainlayout from "./components/leyout/main_layout";
 import Intro from "./page/intro/intro";
-import Main from "./page/main/main";
+import Main from "./page/main/Main";
 import "./App.css";
 
 function App() {

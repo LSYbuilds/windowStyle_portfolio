@@ -7,6 +7,10 @@ import { useNavigate } from "react-router-dom";
 import Icon from "../svgComponents";
 import { useEffect } from "react";
 const LoadingBar = () => {
+  // 정규식
+  const publicPath = (path) => {
+    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+  };
   const navigate = useNavigate();
   useEffect(() => {
     setInterval(() => {
@@ -17,7 +21,7 @@ const LoadingBar = () => {
     <LoadingBarWrap>
       <div className="inner">
         <div className="my_logo">
-          <img src="/bg/logo_clear.png" alt="" />
+          <img src={publicPath("/bg/logo_clear.png")} alt="" />
         </div>
         <div className="my_text">
           <p className="sub_title">
@@ -28,7 +32,10 @@ const LoadingBar = () => {
         </div>
         <div className="loading_anime_box">
           <div className="loading_track">
-            <img src="/img/loadingBar_img.png" alt="프로그래스 바" />
+            <img
+              src={publicPath("/img/loadingBar_img.png")}
+              alt="프로그래스 바"
+            />
           </div>
         </div>
       </div>

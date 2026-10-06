@@ -9,4 +9,5 @@ export default defineConfig({
     open: true,
     port: 5175,
   },
+  base: "/windowStyle_portfolio/",
 });

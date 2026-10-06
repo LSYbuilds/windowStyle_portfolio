@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 import Icon from "../svgComponents";
 import { use, useEffect, useState } from "react";
 const LoadingView = ({ setIsLoading, setIsLoadingBar }) => {
+  // 정규식
+  const publicPath = (path) => {
+    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+  };
   const navigate = useNavigate();
   const [textIndex, setTextIndex] = useState(0);
   const [firstText, setFirstText] = useState(0);
@@ -87,7 +91,7 @@ const LoadingView = ({ setIsLoading, setIsLoadingBar }) => {
         </div>
         <div className="dos_img">
           <div className="img_box">
-            <img src="/bg/logo_dot.png" alt="도트로고" />
+            <img src={publicPath("/bg/logo_dot.png")} alt="도트로고" />
           </div>
         </div>
       </div>
