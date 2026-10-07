@@ -1,25 +1,59 @@
-import React from "react";
-import { FolderModalWrap } from "../../style/main/main_styled";
+import React, { useState } from "react";
+import { FolderModalWrap } from "../../style/common/Modal_styled";
+import { motion, useDragControls } from "framer-motion";
 
-const FolderModal = ({ clickData }) => {
+const FolderModal = ({ clickData, setIsModal }) => {
+  const defaultStyle = { width: "40%", height: "60%" };
+  const fullStyle = { width: "100%", height: "100%", top: "0px", left: "0px" };
+  const [full, setFull] = useState(false);
+  const dragControls = useDragControls();
+  const [modalStyle, setModalStyle] = useState(defaultStyle);
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
   return (
-    <FolderModalWrap>
-      <div className="folder_bar">
+    <FolderModalWrap
+      drag
+      dragControls={dragControls}
+      dragListener={false}
+      dragMomentum={false}
+      style={modalStyle}
+    >
+      <div
+        className="folder_bar"
+        onPointerDown={(e) => {
+          dragControls.start(e);
+        }}
+      >
         <div className="top_bar">
           <div className="icon_name">
             <div className="icon_img">
-              <img src={publicPath("/icon/FolderClosed.png")} alt="" />
+              <img src={publicPath(clickData.src)} alt="" />
               {/* <img src={publicPath(clickData.src)} alt="폴더이미지" /> */}
             </div>
-            <div className="folder_name">클릭데이터 타이틀 들어감</div>
+            <div className="folder_name">{clickData.title}</div>
           </div>
           <div className="folder_button">
             <button className="minimal"></button>
-            <button className="full"></button>
-            <button className="close"></button>
+            {full ? (
+              <button
+                className="restore"
+                onClick={() => {
+                  (setModalStyle(defaultStyle), setFull(false));
+                }}
+              ></button>
+            ) : (
+              <button
+                className="full"
+                onClick={() => {
+                  (setModalStyle(fullStyle), setFull(true));
+                }}
+              ></button>
+            )}
+            <button
+              className="close"
+              onClick={() => setIsModal(false)}
+            ></button>
           </div>
         </div>
         <div className="folder_funtion_bar">
@@ -33,32 +67,44 @@ const FolderModal = ({ clickData }) => {
           </ul>
           <ul className="file_func_bottom">
             <li>
-              {/* <img src="" alt="" /> */}
+              <img src={publicPath("/icon/Back.png")} alt="" />
               <span>뒤로</span>
             </li>
-            <li>{/* <img src="" alt="" /> */}</li>
-            <li>{/* <img src="" alt="" /> */}</li>
             <li>
-              {/* <img src="" alt="" /> */}
+              <img src={publicPath("/icon/Back.png")} alt="" />
+            </li>
+            <li>
+              <img src={publicPath("/icon/Up.png")} alt="" />
+            </li>
+            <li>
+              <img src={publicPath("/icon/Search.png")} alt="" />
               <span>검색</span>
             </li>
             <li>
-              {/* <img src="" alt="" /> */}
+              <img src={publicPath("/icon/FolderView.png")} alt="" />
               <span>폴더</span>
             </li>
-            <li>{/* <img src="" alt="" /> */}</li>
           </ul>
-          <div className="file_address">
-            <p>주소</p>
-            <div className="file_address_text"></div>
-            <div className="moveto">
-              {/* <img src="" alt="" /> */}
-              <span>이동</span>
-            </div>
-          </div>
         </div>
       </div>
-      <div className="inner"></div>
+      <div className="inner">
+        <ul className="item_list">
+          {clickData.list ? (
+            <>
+              {clickData.list.map((item) => (
+                <li key={item.id}>
+                  <div className="icon_img_box">
+                    <img src={publicPath(item.src)} alt="" />
+                  </div>
+                  <div className="icon_text">{item.title}</div>
+                </li>
+              ))}
+            </>
+          ) : (
+            <></>
+          )}
+        </ul>
+      </div>
     </FolderModalWrap>
   );
 };

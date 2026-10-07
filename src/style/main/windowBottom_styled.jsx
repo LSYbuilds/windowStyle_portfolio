@@ -39,6 +39,7 @@ export const WindowBottomWrap = styled.div`
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
         background: #48a547;
+        cursor: pointer;
         background: linear-gradient(
           90deg,
           rgba(72, 165, 71, 1) 89%,

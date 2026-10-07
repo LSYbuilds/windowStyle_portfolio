@@ -8,14 +8,22 @@ import Main from "./page/main/Main";
 import "./App.css";
 
 function App() {
+  const [bottomBar, setBottomBar] = useState(null);
   return (
     <Wrap>
       <Routes>
         <Route element={<Introlayout />}>
           <Route path="/" element={<Intro />}></Route>
         </Route>
-        <Route element={<Mainlayout />}>
-          <Route path="/main" element={<Main />}></Route>
+        <Route
+          element={
+            <Mainlayout bottomBar={bottomBar} setBottomBar={setBottomBar} />
+          }
+        >
+          <Route
+            path="/main"
+            element={<Main setBottomBar={setBottomBar} />}
+          ></Route>
         </Route>
       </Routes>
     </Wrap>

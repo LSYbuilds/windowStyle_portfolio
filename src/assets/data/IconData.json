@@ -54,21 +54,24 @@
       "title": "게임메카",
       "src": "/icon/gameMeca.png",
       "func": "1",
-      "class": "shot"
+      "class": "shot",
+      "address": "https://lsybuilds.github.io/gamemecarebulding/"
     },
     {
       "id": "9",
       "title": "부산광역시",
       "src": "/icon/busan.png",
       "func": "1",
-      "class": "shot"
+      "class": "shot",
+      "address": "https://lsybuilds.github.io/clonebusanhome/"
     },
     {
       "id": "10",
       "title": "BangBoo키오스크",
       "src": "/icon/bangboo.png",
       "func": "1",
-      "class": "shot"
+      "class": "shot",
+      "address": "https://lsybuilds.github.io/Simple_Kiosk/"
     },
     {
       "id": "11",
@@ -134,6 +137,14 @@
       "src": "/icon/JPG.png",
       "func": "1",
       "class": "file"
+    },
+    {
+      "id": "13",
+      "title": "이력서",
+      "src": "/icon/word.png",
+      "func": "1",
+      "class": "file",
+      "detail": "word"
     }
   ]
 }

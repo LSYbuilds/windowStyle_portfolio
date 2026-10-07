@@ -1,7 +1,7 @@
 import React from "react";
 import { WindowBottomWrap } from "../../style/main/windowBottom_styled";
 
-const WindowBottomBar = () => {
+const WindowBottomBar = ({ bottomBar, setBottomBar }) => {
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;

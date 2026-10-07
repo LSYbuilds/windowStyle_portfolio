@@ -8,16 +8,26 @@ const WindowView = () => {
   const [iconListData, setIconListData] = useState(IconList);
   const [iconClickIndex, setIconClickIndex] = useState(null);
   const [clickData, setClickData] = useState(null);
-  const [isModal, setIsModal] = useState(true);
+  // 모달스테이트
+  const [isModal, setIsModal] = useState(false);
   console.log("클릭데이터", clickData);
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
+  // <FolderModal clickData={clickData} setIsModal={setIsModal} />
   const handleClick = () => {};
   return (
     <WindowViewWrap>
-      {isModal && <FolderModal clickData={clickData} />}
+      {isModal && clickData ? (
+        clickData.class === "folder" ? (
+          <FolderModal clickData={clickData} setIsModal={setIsModal} />
+        ) : (
+          ""
+        )
+      ) : (
+        ""
+      )}
       <ul className="icon_list_box">
         {iconListData.map((item, idx) => (
           <li
@@ -28,7 +38,13 @@ const WindowView = () => {
             className={iconClickIndex === idx ? "clickIcon" : ""}
           >
             <div className="icon_img_box">
-              <img src={publicPath(item.src)} alt="아이콘이미지" />
+              {item.class === "shot" ? (
+                <a href={item.address}>
+                  <img src={publicPath(item.src)} alt="아이콘이미지" />
+                </a>
+              ) : (
+                <img src={publicPath(item.src)} alt="아이콘이미지" />
+              )}
               {item.class === "shot" ? <div className="shotcutIcon"></div> : ""}
             </div>
 
