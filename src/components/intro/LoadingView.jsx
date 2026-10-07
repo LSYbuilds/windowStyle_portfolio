@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom";
 import { LoadingWrap } from "../../style/intro/loadingView_styled";
 import { useNavigate } from "react-router-dom";
-import Icon from "../svgComponents";
+import Icon from "../common/SvgComponents";
 import { use, useEffect, useState } from "react";
 const LoadingView = ({ setIsLoading, setIsLoadingBar }) => {
   // 정규식

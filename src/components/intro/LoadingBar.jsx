@@ -4,7 +4,7 @@ import { Autoplay } from "swiper/modules";
 import { LoadingBarWrap } from "../../style/intro/loadingBar_styled";
 import { LoadingBarBox } from "../../style/intro/Swiper_styled";
 import { useNavigate } from "react-router-dom";
-import Icon from "../svgComponents";
+import Icon from "../common/SvgComponents";
 import { useEffect } from "react";
 const LoadingBar = () => {
   // 정규식
