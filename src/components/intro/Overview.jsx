@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { OverViewWrap } from "../../style/intro/overview_styled";
-import Icon from "../svgComponents";
+import Icon from "../common/SvgComponents";
 const OverView = ({ setIsOver, setIsLoading }) => {
   const navigate = useNavigate();
   const handleSkip = () => {

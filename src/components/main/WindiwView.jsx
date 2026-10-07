@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { WindowViewWrap } from "../../style/main/main_styled";
 import IconData from "../../assets/data/IconData.json";
 import FolderModal from "../common/FolderModal";
+import ResumeModal from "../common/ResumeModal";
 
 const WindowView = () => {
   const IconList = IconData.iconDataList;
@@ -17,17 +18,26 @@ const WindowView = () => {
   };
   // <FolderModal clickData={clickData} setIsModal={setIsModal} />
   const handleClick = () => {};
+  const renderModal = () => {
+    if (!isModal || !clickData) return null;
+    if (clickData.class === "folder") {
+      return <FolderModal clickData={clickData} setIsModal={setIsModal} />;
+    }
+    if (clickData.class === "file") {
+      switch (clickData.detail) {
+        case "word":
+          return <ResumeModal />;
+        case "picture":
+          return null;
+        default:
+          return null;
+      }
+    }
+    return null;
+  };
   return (
     <WindowViewWrap>
-      {isModal && clickData ? (
-        clickData.class === "folder" ? (
-          <FolderModal clickData={clickData} setIsModal={setIsModal} />
-        ) : (
-          ""
-        )
-      ) : (
-        ""
-      )}
+      {renderModal()}
       <ul className="icon_list_box">
         {iconListData.map((item, idx) => (
           <li

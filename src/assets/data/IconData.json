@@ -136,7 +136,8 @@
       "title": "내 사진",
       "src": "/icon/JPG.png",
       "func": "1",
-      "class": "file"
+      "class": "file",
+      "detail": "picture"
     },
     {
       "id": "13",
