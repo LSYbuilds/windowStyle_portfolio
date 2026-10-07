@@ -25,14 +25,16 @@ const ResumeModal = () => {
               </button>
             </div>
 
-            <button className="save" aria-label="저장"></button>
+            <button className="save" aria-label="저장">
+              <Icon.saveFilled />
+            </button>
 
             <button className="arrow_wise" aria-label="다시 실행">
-              <span>다시 실행</span>
+              <Icon.arrowBack />
             </button>
 
             <button className="arrow_back" aria-label="실행 취소">
-              <span>실행 취소</span>
+              <Icon.arrowWise />
             </button>
             <div className="default_name">
               <span>문서1</span>

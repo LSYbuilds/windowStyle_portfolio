@@ -16,6 +16,9 @@ export const FolderModalWrap = styled(motion.div)`
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #184bc1;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.12);
   .folder_bar {
     display: flex;
     flex-direction: column;
@@ -205,20 +208,14 @@ export const FolderModalWrap = styled(motion.div)`
 export const ResumeModalWrap = styled(motion.div)`
   position: fixed;
   z-index: 800;
-
   width: 80%;
   height: 80%;
-
   top: 30px;
   left: 30px;
-
   display: flex;
   flex-direction: column;
-
   background-color: #fff;
-
   border: 1px solid #d1d1d1;
-
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.2),
     0 8px 24px rgba(0, 0, 0, 0.12);
