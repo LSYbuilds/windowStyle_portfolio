@@ -156,7 +156,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       cursor: pointer;
     }
   }
-`,Ui={power:e=>(0,F.jsxs)(`svg`,{width:46,height:50,viewBox:`0 0 46 50`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,...e,children:[(0,F.jsx)(`g`,{clipPath:`url(#clip0_44_3)`,children:(0,F.jsx)(`path`,{d:`M46 26.9231C46 30.0481 45.3911 33.0329 44.1732 35.8774C42.9553 38.722 41.3181 41.1759 39.2617 43.2392C37.2053 45.3025 34.7595 46.9451 31.9245 48.1671C29.0894 49.389 26.1146 50 23 50C19.8854 50 16.9106 49.389 14.0755 48.1671C11.2405 46.9451 8.7947 45.3025 6.73828 43.2392C4.68186 41.1759 3.0447 38.722 1.82682 35.8774C0.608941 33.0329 0 30.0481 0 26.9231C0 23.2772 0.803602 19.8417 2.41081 16.6166C4.01801 13.3914 6.27908 10.6871 9.19401 8.50361C10.0525 7.86258 11.0059 7.61218 12.054 7.7524C13.1022 7.89263 13.9358 8.39343 14.5547 9.25481C15.1936 10.0962 15.4382 11.0427 15.2884 12.0944C15.1387 13.146 14.6445 13.9924 13.806 14.6334C11.8494 16.1158 10.337 17.9287 9.26888 20.0721C8.20074 22.2155 7.66667 24.4992 7.66667 26.9231C7.66667 29.0064 8.07096 30.9946 8.87956 32.8876C9.68815 34.7806 10.7812 36.4183 12.1589 37.8005C13.5365 39.1827 15.1686 40.2794 17.0553 41.0907C18.9421 41.902 20.9236 42.3077 23 42.3077C25.0764 42.3077 27.0579 41.902 28.9447 41.0907C30.8314 40.2794 32.4635 39.1827 33.8411 37.8005C35.2188 36.4183 36.3118 34.7806 37.1204 32.8876C37.929 30.9946 38.3333 29.0064 38.3333 26.9231C38.3333 24.4992 37.7993 22.2155 36.7311 20.0721C35.663 17.9287 34.1506 16.1158 32.194 14.6334C31.3555 13.9924 30.8613 13.146 30.7116 12.0944C30.5618 11.0427 30.8064 10.0962 31.4453 9.25481C32.0642 8.39343 32.9028 7.89263 33.9609 7.7524C35.0191 7.61218 35.9674 7.86258 36.806 8.50361C39.7209 10.6871 41.982 13.3914 43.5892 16.6166C45.1964 19.8417 46 23.2772 46 26.9231ZM26.8333 3.84615V23.0769C26.8333 24.1186 26.454 25.02 25.6953 25.7812C24.9366 26.5425 24.0382 26.9231 23 26.9231C21.9618 26.9231 21.0634 26.5425 20.3047 25.7812C19.546 25.02 19.1667 24.1186 19.1667 23.0769V3.84615C19.1667 2.80449 19.546 1.90304 20.3047 1.14183C21.0634 0.380609 21.9618 0 23 0C24.0382 0 24.9366 0.380609 25.6953 1.14183C26.454 1.90304 26.8333 2.80449 26.8333 3.84615Z`,fill:`black`})}),(0,F.jsx)(`defs`,{children:(0,F.jsx)(`clipPath`,{id:`clip0_44_3`,children:(0,F.jsx)(`rect`,{width:46,height:50,fill:`white`})})})]})},Wi=({setIsOver:e,setIsLoading:t})=>{let n=bt(),r=()=>{n(`/main`)};return(0,F.jsx)(Hi,{children:(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsxs)(`div`,{className:`computer_box`,children:[(0,F.jsx)(`div`,{className:`power_on_btn`,onClick:()=>{e(!1),t(!0)},children:(0,F.jsx)(Ui.power,{})}),(0,F.jsx)(`div`,{className:`intro_skip`,onClick:()=>r(),children:`인트로 스킵`})]})})})},Gi=Pi.div`
+`,Ui={arrowBack:e=>(0,F.jsxs)(`svg`,{width:32,height:32,viewBox:`0 0 32 32`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,...e,children:[(0,F.jsx)(`path`,{d:`M10.6667 6.66602L4 13.3327L10.6667 19.9993`,stroke:`black`,strokeWidth:2,strokeLinecap:`round`,strokeLinejoin:`round`}),(0,F.jsx)(`path`,{d:`M4 13.332H14.6667C22.0307 13.332 28 19.3014 28 26.6654V27.9987`,stroke:`black`,strokeWidth:2,strokeLinecap:`round`,strokeLinejoin:`round`})]}),arrowWise:e=>(0,F.jsxs)(`svg`,{width:32,height:32,viewBox:`0 0 32 32`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,...e,children:[(0,F.jsx)(`path`,{d:`M26.3118 21.4128C25.184 23.6937 23.3544 25.5527 21.0918 26.7168C18.8458 27.8707 16.2846 28.2602 13.7972 27.8261C11.3021 27.387 9.01619 26.1522 7.28116 24.3061C5.53055 22.4422 4.41584 20.0713 4.09716 17.5341C3.77413 14.9911 4.26123 12.411 5.48916 10.1608C6.70585 7.92773 8.60773 6.14458 10.9145 5.07415C13.2056 4.01303 15.7803 3.72841 18.2478 4.26348C20.7145 4.79815 22.7358 6.01415 24.4078 7.93681C24.6092 8.15015 25.3878 9.01148 26.0345 10.3115`,stroke:`black`,strokeWidth:2,strokeLinecap:`round`,strokeLinejoin:`round`}),(0,F.jsx)(`path`,{d:`M20.0918 10.4178L26.8118 11.6271L27.9998 4.78711`,stroke:`black`,strokeWidth:2,strokeLinecap:`round`,strokeLinejoin:`round`})]}),saveFilled:e=>(0,F.jsx)(`svg`,{width:32,height:32,viewBox:`0 0 32 32`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,...e,children:(0,F.jsx)(`path`,{d:`M6.66667 28H25.3333C26.8 28 28 26.8 28 25.3334V10.6667C28 10.3067 27.8533 9.97336 27.6133 9.72002L22.28 4.38669C22.1554 4.26311 22.0077 4.16535 21.8452 4.09899C21.6828 4.03264 21.5088 3.99901 21.3333 4.00002H6.66667C5.2 4.00002 4 5.20002 4 6.66669V25.3334C4 26.8 5.2 28 6.66667 28ZM9.33333 6.66669H14.6667V9.33336H17.3333V6.66669H20V12H9.33333V6.66669ZM9.33333 17.3334C9.33333 16.6 9.93333 16 10.6667 16H21.3333C22.0667 16 22.6667 16.6 22.6667 17.3334V25.3334H9.33333V17.3334Z`,fill:`#D492D8`})}),power:e=>(0,F.jsxs)(`svg`,{width:46,height:50,viewBox:`0 0 46 50`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,...e,children:[(0,F.jsx)(`g`,{clipPath:`url(#clip0_44_3)`,children:(0,F.jsx)(`path`,{d:`M46 26.9231C46 30.0481 45.3911 33.0329 44.1732 35.8774C42.9553 38.722 41.3181 41.1759 39.2617 43.2392C37.2053 45.3025 34.7595 46.9451 31.9245 48.1671C29.0894 49.389 26.1146 50 23 50C19.8854 50 16.9106 49.389 14.0755 48.1671C11.2405 46.9451 8.7947 45.3025 6.73828 43.2392C4.68186 41.1759 3.0447 38.722 1.82682 35.8774C0.608941 33.0329 0 30.0481 0 26.9231C0 23.2772 0.803602 19.8417 2.41081 16.6166C4.01801 13.3914 6.27908 10.6871 9.19401 8.50361C10.0525 7.86258 11.0059 7.61218 12.054 7.7524C13.1022 7.89263 13.9358 8.39343 14.5547 9.25481C15.1936 10.0962 15.4382 11.0427 15.2884 12.0944C15.1387 13.146 14.6445 13.9924 13.806 14.6334C11.8494 16.1158 10.337 17.9287 9.26888 20.0721C8.20074 22.2155 7.66667 24.4992 7.66667 26.9231C7.66667 29.0064 8.07096 30.9946 8.87956 32.8876C9.68815 34.7806 10.7812 36.4183 12.1589 37.8005C13.5365 39.1827 15.1686 40.2794 17.0553 41.0907C18.9421 41.902 20.9236 42.3077 23 42.3077C25.0764 42.3077 27.0579 41.902 28.9447 41.0907C30.8314 40.2794 32.4635 39.1827 33.8411 37.8005C35.2188 36.4183 36.3118 34.7806 37.1204 32.8876C37.929 30.9946 38.3333 29.0064 38.3333 26.9231C38.3333 24.4992 37.7993 22.2155 36.7311 20.0721C35.663 17.9287 34.1506 16.1158 32.194 14.6334C31.3555 13.9924 30.8613 13.146 30.7116 12.0944C30.5618 11.0427 30.8064 10.0962 31.4453 9.25481C32.0642 8.39343 32.9028 7.89263 33.9609 7.7524C35.0191 7.61218 35.9674 7.86258 36.806 8.50361C39.7209 10.6871 41.982 13.3914 43.5892 16.6166C45.1964 19.8417 46 23.2772 46 26.9231ZM26.8333 3.84615V23.0769C26.8333 24.1186 26.454 25.02 25.6953 25.7812C24.9366 26.5425 24.0382 26.9231 23 26.9231C21.9618 26.9231 21.0634 26.5425 20.3047 25.7812C19.546 25.02 19.1667 24.1186 19.1667 23.0769V3.84615C19.1667 2.80449 19.546 1.90304 20.3047 1.14183C21.0634 0.380609 21.9618 0 23 0C24.0382 0 24.9366 0.380609 25.6953 1.14183C26.454 1.90304 26.8333 2.80449 26.8333 3.84615Z`,fill:`black`})}),(0,F.jsx)(`defs`,{children:(0,F.jsx)(`clipPath`,{id:`clip0_44_3`,children:(0,F.jsx)(`rect`,{width:46,height:50,fill:`white`})})})]})},Wi=({setIsOver:e,setIsLoading:t})=>{let n=bt(),r=()=>{n(`/main`)};return(0,F.jsx)(Hi,{children:(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsxs)(`div`,{className:`computer_box`,children:[(0,F.jsx)(`div`,{className:`power_on_btn`,onClick:()=>{e(!1),t(!0)},children:(0,F.jsx)(Ui.power,{})}),(0,F.jsx)(`div`,{className:`intro_skip`,onClick:()=>r(),children:`인트로 스킵`})]})})})},Gi=Pi.div`
   font-family: "DOS";
   width: 100vw;
   height: 100vh;
@@ -365,7 +365,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       background-color: #5656d3;
     }
   }
-`,tv={iconDataList:[{id:`1`,title:`내 컴퓨터`,src:`/icon/MyComputer.png`,func:`1`,class:`folder`},{id:`2`,title:`인터넷`,src:`/icon/InternetExplorer.png`,func:`1`,class:`internet`},{id:`3`,title:`내 문서`,src:`/icon/MyDocuments.png`,func:`1`,class:`folder`},{id:`4`,title:`휴지통`,src:`/icon/RecycleBin.png`,func:`1`,class:`file`},{id:`5`,title:`음악`,src:`/icon/MyMusic.png`,func:`1`,class:`folder`},{id:`6`,title:`사진`,src:`/icon/MyPictures.png`,func:`1`,class:`folder`},{id:`7`,title:`영상`,src:`/icon/MyVideos.png`,func:`1`,class:`folder`},{id:`8`,title:`게임메카`,src:`/icon/gameMeca.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/gamemecarebulding/`},{id:`9`,title:`부산광역시`,src:`/icon/busan.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/clonebusanhome/`},{id:`10`,title:`BangBoo키오스크`,src:`/icon/bangboo.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/Simple_Kiosk/`},{id:`11`,title:`사용툴`,src:`/icon/FolderClosed.png`,func:`1`,class:`folder`,list:[{id:`1`,title:`HTML5`,src:`/icon/html5.png`,func:`1`,class:`file`},{id:`2`,title:`CSS`,src:`/icon/css.png`,func:`1`,class:`file`},{id:`3`,title:`Adobe Photoshop`,src:`/icon/Adobe_Photoshop.png`,func:`1`,class:`file`},{id:`4`,title:`Figma`,src:`/icon/Figma-logo.png`,func:`1`,class:`file`},{id:`5`,title:`REACT`,src:`/icon/React.png`,func:`1`,class:`file`},{id:`6`,title:`JavaScript`,src:`/icon/JavaScript.png`,func:`1`,class:`file`},{id:`7`,title:`GitHub`,src:`/icon/GitHub.png`,func:`1`,class:`file`}]},{id:`12`,title:`내 사진`,src:`/icon/JPG.png`,func:`1`,class:`file`},{id:`13`,title:`이력서`,src:`/icon/word.png`,func:`1`,class:`file`,detail:`word`}]},nv=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`,rv=Pi(J_.div)`
+`,tv={iconDataList:[{id:`1`,title:`내 컴퓨터`,src:`/icon/MyComputer.png`,func:`1`,class:`folder`},{id:`2`,title:`인터넷`,src:`/icon/InternetExplorer.png`,func:`1`,class:`internet`},{id:`3`,title:`내 문서`,src:`/icon/MyDocuments.png`,func:`1`,class:`folder`},{id:`4`,title:`휴지통`,src:`/icon/RecycleBin.png`,func:`1`,class:`file`},{id:`5`,title:`음악`,src:`/icon/MyMusic.png`,func:`1`,class:`folder`},{id:`6`,title:`사진`,src:`/icon/MyPictures.png`,func:`1`,class:`folder`},{id:`7`,title:`영상`,src:`/icon/MyVideos.png`,func:`1`,class:`folder`},{id:`8`,title:`게임메카`,src:`/icon/gameMeca.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/gamemecarebulding/`},{id:`9`,title:`부산광역시`,src:`/icon/busan.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/clonebusanhome/`},{id:`10`,title:`BangBoo키오스크`,src:`/icon/bangboo.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/Simple_Kiosk/`},{id:`11`,title:`사용툴`,src:`/icon/FolderClosed.png`,func:`1`,class:`folder`,list:[{id:`1`,title:`HTML5`,src:`/icon/html5.png`,func:`1`,class:`file`},{id:`2`,title:`CSS`,src:`/icon/css.png`,func:`1`,class:`file`},{id:`3`,title:`Adobe Photoshop`,src:`/icon/Adobe_Photoshop.png`,func:`1`,class:`file`},{id:`4`,title:`Figma`,src:`/icon/Figma-logo.png`,func:`1`,class:`file`},{id:`5`,title:`REACT`,src:`/icon/React.png`,func:`1`,class:`file`},{id:`6`,title:`JavaScript`,src:`/icon/JavaScript.png`,func:`1`,class:`file`},{id:`7`,title:`GitHub`,src:`/icon/GitHub.png`,func:`1`,class:`file`}]},{id:`12`,title:`내 사진`,src:`/icon/JPG.png`,func:`1`,class:`file`,detail:`picture`},{id:`13`,title:`이력서`,src:`/icon/word.png`,func:`1`,class:`file`,detail:`word`}]},nv=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`,rv=Pi(J_.div)`
   position: fixed;
   z-index: 800;
   top: 0px;
@@ -560,4 +560,587 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       }
     }
   }
-`;Pi.div``;var iv=({clickData:e,setIsModal:t})=>{let n={width:`40%`,height:`60%`},r={width:`100%`,height:`100%`,top:`0px`,left:`0px`},[i,a]=(0,S.useState)(!1),o=Z_(),[s,c]=(0,S.useState)(n),l=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(rv,{drag:!0,dragControls:o,dragListener:!1,dragMomentum:!1,style:s,children:[(0,F.jsxs)(`div`,{className:`folder_bar`,onPointerDown:e=>{o.start(e)},children:[(0,F.jsxs)(`div`,{className:`top_bar`,children:[(0,F.jsxs)(`div`,{className:`icon_name`,children:[(0,F.jsx)(`div`,{className:`icon_img`,children:(0,F.jsx)(`img`,{src:l(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`folder_name`,children:e.title})]}),(0,F.jsxs)(`div`,{className:`folder_button`,children:[(0,F.jsx)(`button`,{className:`minimal`}),i?(0,F.jsx)(`button`,{className:`restore`,onClick:()=>{c(n),a(!1)}}):(0,F.jsx)(`button`,{className:`full`,onClick:()=>{c(r),a(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>t(!1)})]})]}),(0,F.jsxs)(`div`,{className:`folder_funtion_bar`,children:[(0,F.jsxs)(`ul`,{className:`file_func_top`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`편집`}),(0,F.jsx)(`li`,{children:`보기`}),(0,F.jsx)(`li`,{children:`즐겨찾기`}),(0,F.jsx)(`li`,{children:`도구`}),(0,F.jsx)(`li`,{children:`도움말`})]}),(0,F.jsxs)(`ul`,{className:`file_func_bottom`,children:[(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:l(`/icon/Back.png`),alt:``}),(0,F.jsx)(`span`,{children:`뒤로`})]}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:l(`/icon/Back.png`),alt:``})}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:l(`/icon/Up.png`),alt:``})}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:l(`/icon/Search.png`),alt:``}),(0,F.jsx)(`span`,{children:`검색`})]}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:l(`/icon/FolderView.png`),alt:``}),(0,F.jsx)(`span`,{children:`폴더`})]})]})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`ul`,{className:`item_list`,children:e.list?(0,F.jsx)(F.Fragment,{children:e.list.map(e=>(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`div`,{className:`icon_img_box`,children:(0,F.jsx)(`img`,{src:l(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},e.id))}):(0,F.jsx)(F.Fragment,{})})})]})},av=()=>{let e=tv.iconDataList,[t,n]=(0,S.useState)(e),[r,i]=(0,S.useState)(null),[a,o]=(0,S.useState)(null),[s,c]=(0,S.useState)(!1);console.log(`클릭데이터`,a);let l=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(ev,{children:[s&&a&&a.class===`folder`?(0,F.jsx)(iv,{clickData:a,setIsModal:c}):``,(0,F.jsx)(`ul`,{className:`icon_list_box`,children:t.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>{i(t),o(e),c(!0)},className:r===t?`clickIcon`:``,children:[(0,F.jsxs)(`div`,{className:`icon_img_box`,children:[e.class===`shot`?(0,F.jsx)(`a`,{href:e.address,children:(0,F.jsx)(`img`,{src:l(e.src),alt:`아이콘이미지`})}):(0,F.jsx)(`img`,{src:l(e.src),alt:`아이콘이미지`}),e.class===`shot`?(0,F.jsx)(`div`,{className:`shotcutIcon`}):``]}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},t))})]})},ov=J_,sv=()=>{let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{let e=setTimeout(()=>{t(!1)},2e3);return()=>clearTimeout(e)},[]),(0,F.jsxs)($_,{children:[(0,F.jsx)(ng,{children:e&&(0,F.jsx)(ov.div,{className:`fade_bg`,initial:{opacity:1},exit:{opacity:0},transition:{duration:2}})}),(0,F.jsx)(av,{})]})};function cv(){let[e,t]=(0,S.useState)(null);return(0,F.jsx)(Fi,{children:(0,F.jsxs)(Jt,{children:[(0,F.jsx)(Kt,{element:(0,F.jsx)(Li,{}),children:(0,F.jsx)(Kt,{path:`/`,element:(0,F.jsx)(ps,{})})}),(0,F.jsx)(Kt,{element:(0,F.jsx)(Bi,{bottomBar:e,setBottomBar:t}),children:(0,F.jsx)(Kt,{path:`/main`,element:(0,F.jsx)(sv,{setBottomBar:t})})})]})})}(0,Wn.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(S.StrictMode,{children:(0,F.jsx)(Mn,{basename:`/windowStyle_portfolio`,children:(0,F.jsx)(cv,{})})}));
+`,iv=Pi(J_.div)`
+  position: fixed;
+  z-index: 800;
+
+  width: 80%;
+  height: 80%;
+
+  top: 30px;
+  left: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+
+  border: 1px solid #d1d1d1;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+
+  font-family: "Segoe UI", "Malgun Gothic", Arial, sans-serif;
+
+  color: #202020;
+
+  /* ---------------------------------
+     Word 상단 전체
+  --------------------------------- */
+
+  .resume_bar {
+    width: 100%;
+    flex-shrink: 0;
+
+    background-color: #fff;
+  }
+
+  /* ---------------------------------
+     최상단
+  --------------------------------- */
+
+  .word_top {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 14px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    background-color: #fff;
+  }
+
+  /* 왼쪽 영역 */
+
+  .word_info {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    white-space: nowrap;
+  }
+
+  /* Word 로고 */
+
+  .word_logo {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #185abd;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 2px;
+
+    position: relative;
+  }
+
+  .word_logo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+    bottom: 3px;
+
+    width: 6px;
+    height: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  /* 자동 저장 */
+
+  .auto_save {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 13px;
+
+    color: #3f3f3f;
+  }
+
+  /* 토글 */
+
+  .toggle {
+    width: 38px;
+    height: 20px;
+
+    padding: 2px;
+
+    border: 1px solid #b7b7b7;
+    border-radius: 20px;
+
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+
+    cursor: default;
+  }
+
+  .toggle span {
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background-color: #6f6f6f;
+
+    display: block;
+  }
+
+  /* 상단 버튼 공통 */
+
+  .save,
+  .arrow_wise,
+  .arrow_back,
+  .drop_button {
+    width: 26px;
+    height: 26px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    position: relative;
+
+    cursor: default;
+  }
+
+  /* 저장 아이콘 */
+
+  .save::before {
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: #9b45b5;
+
+    border-radius: 2px;
+  }
+
+  .save::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 5px;
+
+    left: 50%;
+    top: 5px;
+
+    transform: translateX(-50%);
+
+    background-color: #fff;
+  }
+
+  /* 실행 취소 */
+
+  .arrow_back::before {
+    content: "↶";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -55%);
+
+    font-size: 23px;
+    font-weight: 300;
+
+    color: #858585;
+  }
+
+  /* 다시 실행 */
+
+  .arrow_wise::before {
+    content: "↷";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -55%);
+
+    font-size: 23px;
+    font-weight: 300;
+
+    color: #858585;
+  }
+
+  /* 드롭다운 */
+
+  .drop_button::before {
+    content: "⌄";
+
+    font-size: 15px;
+
+    color: #555;
+  }
+
+  /* 접근성용 텍스트 숨기기 */
+
+  .save span,
+  .arrow_wise span,
+  .arrow_back span,
+  .drop_button span {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+  }
+
+  /* 문서명 */
+
+  .default_name {
+    display: flex;
+    align-items: center;
+
+    margin-left: 8px;
+
+    font-size: 14px;
+
+    color: #444;
+  }
+
+  .default_name span:first-child {
+    font-weight: 500;
+  }
+
+  .default_name span:last-child {
+    margin-left: 4px;
+  }
+
+  /* ---------------------------------
+     오른쪽
+  --------------------------------- */
+
+  .word_right {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+  }
+
+  /* 검색 */
+
+  .search {
+    width: 395px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    margin-right: 22px;
+
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+
+    background-color: #fff;
+
+    color: #777;
+
+    font-size: 13px;
+  }
+
+  .search_icon {
+    width: 13px;
+    height: 13px;
+
+    margin-right: 10px;
+
+    border: 2px solid #777;
+
+    border-radius: 50%;
+
+    position: relative;
+  }
+
+  .search_icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 2px;
+
+    right: -5px;
+    bottom: -3px;
+
+    background-color: #777;
+
+    transform: rotate(45deg);
+  }
+
+  .search_text {
+    color: #777;
+  }
+
+  /* 로그인 */
+
+  .login {
+    height: 28px;
+
+    margin-right: 20px;
+
+    padding: 0 10px;
+
+    border: 1px solid #202020;
+    border-radius: 3px;
+
+    background-color: #fff;
+
+    color: #202020;
+
+    font-size: 12px;
+
+    cursor: default;
+  }
+
+  /* ---------------------------------
+     창 버튼
+  --------------------------------- */
+
+  .window_button {
+    height: 100%;
+
+    display: flex;
+    align-items: stretch;
+  }
+
+  .window_button button {
+    width: 42px;
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    position: relative;
+  }
+
+  /* 최소화 */
+
+  .window_button .minimal::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 1px;
+
+    left: 50%;
+    top: 53%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: #333;
+  }
+
+  /* 복원 */
+
+  .window_button .restore::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 9px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid #333;
+  }
+
+  .window_button .restore::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 6px;
+
+    left: calc(50% - 4px);
+    top: calc(50% - 5px);
+
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+  }
+
+  /* 닫기 */
+
+  .window_button .close::before,
+  .window_button .close::after {
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+    height: 1px;
+
+    left: 50%;
+    top: 50%;
+
+    background-color: #333;
+  }
+
+  .window_button .close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .window_button .close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  /* hover */
+
+  .window_button button:hover {
+    background-color: #f0f0f0;
+  }
+
+  .window_button .close:hover {
+    background-color: #e81123;
+  }
+
+  .window_button .close:hover::before,
+  .window_button .close:hover::after {
+    background-color: #fff;
+  }
+
+  /* ---------------------------------
+     Word 메뉴
+  --------------------------------- */
+
+  .word_bottom {
+    width: 100%;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 0 20px;
+
+    margin: 0;
+
+    border-bottom: 1px solid #d8d8d8;
+
+    list-style: none;
+
+    background-color: #fff;
+  }
+
+  .word_bottom li {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    font-size: 14px;
+
+    color: #333;
+
+    cursor: default;
+  }
+
+  .word_bottom li.active {
+    font-weight: 600;
+  }
+
+  .word_bottom li.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    background-color: #185abd;
+  }
+
+  /* ---------------------------------
+     실제 문서 영역
+  --------------------------------- */
+
+  .inner {
+    width: 100%;
+    height: calc(100% - 85px);
+
+    overflow: auto;
+
+    background-color: #f3f3f3;
+
+    padding: 35px 40px;
+  }
+
+  .inner_item {
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 실제 종이 */
+
+  .paper {
+    width: 794px;
+    min-height: 1123px;
+
+    background-color: #fff;
+
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  }
+`,av=({clickData:e,setIsModal:t})=>{let n={width:`40%`,height:`60%`},r={width:`100%`,height:`100%`,top:`0px`,left:`0px`},[i,a]=(0,S.useState)(!1),o=Z_(),[s,c]=(0,S.useState)(n),l=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(rv,{drag:!0,dragControls:o,dragListener:!1,dragMomentum:!1,style:s,children:[(0,F.jsxs)(`div`,{className:`folder_bar`,onPointerDown:e=>{o.start(e)},children:[(0,F.jsxs)(`div`,{className:`top_bar`,children:[(0,F.jsxs)(`div`,{className:`icon_name`,children:[(0,F.jsx)(`div`,{className:`icon_img`,children:(0,F.jsx)(`img`,{src:l(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`folder_name`,children:e.title})]}),(0,F.jsxs)(`div`,{className:`folder_button`,children:[(0,F.jsx)(`button`,{className:`minimal`}),i?(0,F.jsx)(`button`,{className:`restore`,onClick:()=>{c(n),a(!1)}}):(0,F.jsx)(`button`,{className:`full`,onClick:()=>{c(r),a(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>t(!1)})]})]}),(0,F.jsxs)(`div`,{className:`folder_funtion_bar`,children:[(0,F.jsxs)(`ul`,{className:`file_func_top`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`편집`}),(0,F.jsx)(`li`,{children:`보기`}),(0,F.jsx)(`li`,{children:`즐겨찾기`}),(0,F.jsx)(`li`,{children:`도구`}),(0,F.jsx)(`li`,{children:`도움말`})]}),(0,F.jsxs)(`ul`,{className:`file_func_bottom`,children:[(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:l(`/icon/Back.png`),alt:``}),(0,F.jsx)(`span`,{children:`뒤로`})]}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:l(`/icon/Back.png`),alt:``})}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:l(`/icon/Up.png`),alt:``})}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:l(`/icon/Search.png`),alt:``}),(0,F.jsx)(`span`,{children:`검색`})]}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:l(`/icon/FolderView.png`),alt:``}),(0,F.jsx)(`span`,{children:`폴더`})]})]})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`ul`,{className:`item_list`,children:e.list?(0,F.jsx)(F.Fragment,{children:e.list.map(e=>(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`div`,{className:`icon_img_box`,children:(0,F.jsx)(`img`,{src:l(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},e.id))}):(0,F.jsx)(F.Fragment,{})})})]})},ov=()=>{let e=Z_();return(0,F.jsxs)(iv,{drag:!0,dragControls:e,dragListener:!1,dragMomentum:!1,children:[(0,F.jsxs)(`div`,{className:`resume_bar`,children:[(0,F.jsxs)(`div`,{className:`word_top`,children:[(0,F.jsxs)(`div`,{className:`word_info`,children:[(0,F.jsx)(`div`,{className:`word_logo`,children:`W`}),(0,F.jsxs)(`div`,{className:`auto_save`,children:[(0,F.jsx)(`span`,{children:`자동 저장`}),(0,F.jsx)(`button`,{className:`toggle`,children:(0,F.jsx)(`span`,{})})]}),(0,F.jsx)(`button`,{className:`save`,"aria-label":`저장`}),(0,F.jsx)(`button`,{className:`arrow_wise`,"aria-label":`다시 실행`,children:(0,F.jsx)(`span`,{children:`다시 실행`})}),(0,F.jsx)(`button`,{className:`arrow_back`,"aria-label":`실행 취소`,children:(0,F.jsx)(`span`,{children:`실행 취소`})}),(0,F.jsxs)(`div`,{className:`default_name`,children:[(0,F.jsx)(`span`,{children:`문서1`}),(0,F.jsx)(`span`,{children:`- Word`})]})]}),(0,F.jsxs)(`div`,{className:`word_right`,children:[(0,F.jsxs)(`div`,{className:`search`,children:[(0,F.jsx)(`span`,{className:`search_icon`}),(0,F.jsx)(`span`,{className:`search_text`,children:`검색`})]}),(0,F.jsx)(`button`,{className:`login`,children:`로그인`}),(0,F.jsxs)(`div`,{className:`window_button`,children:[(0,F.jsx)(`button`,{className:`minimal`,"aria-label":`최소화`,children:(0,F.jsx)(`span`,{})}),(0,F.jsx)(`button`,{className:`restore`,"aria-label":`복원`,children:(0,F.jsx)(`span`,{})}),(0,F.jsx)(`button`,{className:`close`,"aria-label":`닫기`,children:(0,F.jsx)(`span`,{})})]})]})]}),(0,F.jsxs)(`ul`,{className:`word_bottom`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{className:`active`,children:`홈`}),(0,F.jsx)(`li`,{children:`삽입`}),(0,F.jsx)(`li`,{children:`디자인`}),(0,F.jsx)(`li`,{children:`레이아웃`}),(0,F.jsx)(`li`,{children:`참조`}),(0,F.jsx)(`li`,{children:`편지`}),(0,F.jsx)(`li`,{children:`검토`}),(0,F.jsx)(`li`,{children:`보기`}),(0,F.jsx)(`li`,{children:`도움말`})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`div`,{className:`inner_item`,children:(0,F.jsx)(`div`,{className:`paper`})})})]})},sv=()=>{let e=tv.iconDataList,[t,n]=(0,S.useState)(e),[r,i]=(0,S.useState)(null),[a,o]=(0,S.useState)(null),[s,c]=(0,S.useState)(!1);console.log(`클릭데이터`,a);let l=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(ev,{children:[(()=>{if(!s||!a)return null;if(a.class===`folder`)return(0,F.jsx)(av,{clickData:a,setIsModal:c});if(a.class===`file`)switch(a.detail){case`word`:return(0,F.jsx)(ov,{});case`picture`:return null;default:return null}return null})(),(0,F.jsx)(`ul`,{className:`icon_list_box`,children:t.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>{i(t),o(e),c(!0)},className:r===t?`clickIcon`:``,children:[(0,F.jsxs)(`div`,{className:`icon_img_box`,children:[e.class===`shot`?(0,F.jsx)(`a`,{href:e.address,children:(0,F.jsx)(`img`,{src:l(e.src),alt:`아이콘이미지`})}):(0,F.jsx)(`img`,{src:l(e.src),alt:`아이콘이미지`}),e.class===`shot`?(0,F.jsx)(`div`,{className:`shotcutIcon`}):``]}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},t))})]})},cv=J_,lv=()=>{let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{let e=setTimeout(()=>{t(!1)},2e3);return()=>clearTimeout(e)},[]),(0,F.jsxs)($_,{children:[(0,F.jsx)(ng,{children:e&&(0,F.jsx)(cv.div,{className:`fade_bg`,initial:{opacity:1},exit:{opacity:0},transition:{duration:2}})}),(0,F.jsx)(sv,{})]})};function uv(){let[e,t]=(0,S.useState)(null);return(0,F.jsx)(Fi,{children:(0,F.jsxs)(Jt,{children:[(0,F.jsx)(Kt,{element:(0,F.jsx)(Li,{}),children:(0,F.jsx)(Kt,{path:`/`,element:(0,F.jsx)(ps,{})})}),(0,F.jsx)(Kt,{element:(0,F.jsx)(Bi,{bottomBar:e,setBottomBar:t}),children:(0,F.jsx)(Kt,{path:`/main`,element:(0,F.jsx)(lv,{setBottomBar:t})})})]})})}(0,Wn.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(S.StrictMode,{children:(0,F.jsx)(Mn,{basename:`/windowStyle_portfolio`,children:(0,F.jsx)(uv,{})})}));
