@@ -631,3 +631,61 @@ export const ResumeModalWrap = styled(motion.div)`
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   }
 `;
+
+export const WarningModalWrap = styled(motion.div)`
+  position: fixed;
+  z-index: 950;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 30%;
+    background-color: #f3f1e8;
+    .title_bar {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 35px;
+      padding: 0px 4px;
+      background-color: #2259d7;
+      box-sizing: border-box;
+      &::before {
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 255, 255, 0.3);
+        filter: blur(3px);
+      }
+      p {
+        width: auto;
+        align-content: center;
+        height: 100%;
+        color: #fff;
+      }
+      .close_btn {
+        width: 25px;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(${publicPath("/icon/Exit.png")});
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+`;
