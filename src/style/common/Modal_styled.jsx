@@ -641,13 +641,21 @@ export const WarningModalWrap = styled(motion.div)`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   .inner {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    height: 30%;
+    width: auto;
+    height: 20%;
+    overflow: hidden;
     background-color: #f3f1e8;
+    border: 1px solid #184bc1;
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.2),
+      0 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
     .title_bar {
       display: flex;
       justify-content: space-between;
@@ -684,8 +692,55 @@ export const WarningModalWrap = styled(motion.div)`
       }
     }
     .content {
+      flex: 1;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 32px;
+      padding: 0px 5%;
+      .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 5%;
+        width: auto;
+        height: 100%;
+        img {
+          width: 50px;
+          height: auto;
+        }
+      }
+      .content_text {
+        align-content: center;
+        height: 100%;
+        padding: 0px 3%;
+        p {
+          &:nth-of-type(2) {
+            i {
+              font-weight: bold;
+              font-style: normal;
+              color: #2259d7;
+            }
+          }
+        }
+      }
+    }
+    .button_area {
+      display: flex;
+      justify-content: center;
+      flex: 0.3;
+      width: 100%;
+      height: 50px;
+      align-content: center;
+      button {
+        width: auto;
+        height: 35px;
+        padding: 0px 3%;
+        border: 1px solid #000;
+      }
     }
   }
 `;
+
+export const ProgramModalWrap = styled(motion.div)``;

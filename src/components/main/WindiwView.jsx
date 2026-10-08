@@ -65,9 +65,14 @@ const WindowView = () => {
     if (!thisProgramData) return null;
     switch (thisProgramData.func) {
       case "1":
-        return <ProgramModal thisProgramData={thisProgramData} />;
+        return (
+          <ProgramModal
+            thisProgramData={thisProgramData}
+            setIsProgram={setIsProgram}
+          />
+        );
       case "0":
-        return <WarningModal />;
+        return <WarningModal setIsProgram={setIsProgram} />;
       default:
         return null;
     }
