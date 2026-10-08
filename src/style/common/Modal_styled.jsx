@@ -506,101 +506,39 @@ export const ResumeModalWrap = styled(motion.div)`
 
   .window_button {
     height: 100%;
-
     display: flex;
     align-items: stretch;
   }
 
   .window_button button {
-    width: 42px;
+    width: 35px;
     height: 100%;
-
     padding: 0;
-
     border: 0;
-
     background: transparent;
-
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    span {
+      color: red;
+    }
   }
 
-  /* 최소화 */
-
-  .window_button .minimal::before {
-    content: "";
-
-    position: absolute;
-
-    width: 10px;
-    height: 1px;
-
-    left: 50%;
-    top: 53%;
-
-    transform: translate(-50%, -50%);
-
-    background-color: #333;
+  .window_button {
+    .minimal {
+      background-image: url(${publicPath("/icon/word_mini_btn.png")});
+    }
+    .restore {
+      background-image: url(${publicPath("/icon/word_Restore_btn.png")});
+    }
+    .max {
+      background-image: url(${publicPath("/icon/word_max_btn.png")});
+    }
+    .close {
+      background-image: url(${publicPath("/icon/word_close_btn.png")});
+    }
   }
-
-  /* 복원 */
-
-  .window_button .restore::before {
-    content: "";
-
-    position: absolute;
-
-    width: 10px;
-    height: 9px;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    border: 1px solid #333;
-  }
-
-  .window_button .restore::after {
-    content: "";
-
-    position: absolute;
-
-    width: 7px;
-    height: 6px;
-
-    left: calc(50% - 4px);
-    top: calc(50% - 5px);
-
-    border-top: 1px solid #333;
-    border-right: 1px solid #333;
-  }
-
-  /* 닫기 */
-
-  .window_button .close::before,
-  .window_button .close::after {
-    content: "";
-
-    position: absolute;
-
-    width: 14px;
-    height: 1px;
-
-    left: 50%;
-    top: 50%;
-
-    background-color: #333;
-  }
-
-  .window_button .close::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-
-  .window_button .close::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
-
-  /* hover */
 
   .window_button button:hover {
     background-color: #f0f0f0;
@@ -626,8 +564,6 @@ export const ResumeModalWrap = styled(motion.div)`
     display: flex;
     align-items: center;
 
-    gap: 25px;
-
     padding: 0 20px;
 
     margin: 0;
@@ -641,35 +577,25 @@ export const ResumeModalWrap = styled(motion.div)`
 
   .word_bottom li {
     height: 100%;
-
     display: flex;
     align-items: center;
-
     position: relative;
-
     font-size: 14px;
-
+    padding: 0px 16px;
     color: #333;
-
     cursor: default;
+    &:hover {
+      background-color: #e9e9e9;
+    }
   }
 
-  .word_bottom li.active {
+  .word_bottom li.zoom {
     font-weight: 600;
-  }
-
-  .word_bottom li.active::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 2px;
-
-    background-color: #185abd;
+    background-color: #cce0ff;
+    cursor: pointer;
+    &:hover {
+      background-color: #b9d5ff;
+    }
   }
 
   /* ---------------------------------
@@ -698,9 +624,8 @@ export const ResumeModalWrap = styled(motion.div)`
   /* 실제 종이 */
 
   .paper {
-    width: 794px;
+    min-width: 320px;
     min-height: 1123px;
-
     background-color: #fff;
 
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);

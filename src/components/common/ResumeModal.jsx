@@ -4,8 +4,11 @@ import { motion, useDragControls } from "framer-motion";
 import Icon from "./SvgComponents";
 const ResumeModal = ({ setIsModal }) => {
   const [full, setFull] = useState(false);
+  const [innerFull, setInnerFull] = useState(false);
   const dragControls = useDragControls();
   const defaultStyle = { width: "80%", height: "80%" };
+  const innerDefultStyle = { width: "50%" };
+  const innerFullStyle = { width: "100%" };
   const fullStyle = {
     width: "100%",
     height: "100%",
@@ -14,6 +17,7 @@ const ResumeModal = ({ setIsModal }) => {
     left: "0px",
   };
   const [modalStyle, setModalStyle] = useState(defaultStyle);
+  const [innerStyle, setInnerStyle] = useState(innerDefultStyle);
   return (
     <ResumeModalWrap
       style={modalStyle}
@@ -70,16 +74,32 @@ const ResumeModal = ({ setIsModal }) => {
               <button className="minimal" aria-label="최소화">
                 <span></span>
               </button>
+              {full ? (
+                <button
+                  className="restore"
+                  aria-label="축소"
+                  onClick={() => {
+                    {
+                      (setModalStyle(defaultStyle), setFull(false));
+                    }
+                  }}
+                ></button>
+              ) : (
+                <button
+                  className="max"
+                  aria-label="복원"
+                  onClick={() => {
+                    (setModalStyle(fullStyle), setFull(true));
+                  }}
+                ></button>
+              )}
 
               <button
-                className="restore"
-                aria-label="복원"
-                onClick={() => setModalStyle(fullStyle)}
+                className="close"
+                onClick={() => {
+                  setIsModal(false);
+                }}
               >
-                <span></span>
-              </button>
-
-              <button className="close" onClick={() => setIsModal(false)}>
                 <span></span>
               </button>
             </div>
@@ -89,7 +109,7 @@ const ResumeModal = ({ setIsModal }) => {
         {/* 메뉴 */}
         <ul className="word_bottom">
           <li>파일</li>
-          <li className="active">홈</li>
+          <li>홈</li>
           <li>삽입</li>
           <li>디자인</li>
           <li>레이아웃</li>
@@ -97,14 +117,34 @@ const ResumeModal = ({ setIsModal }) => {
           <li>편지</li>
           <li>검토</li>
           <li>보기</li>
-          <li>도움말</li>
+          {innerFull ? (
+            <li
+              className="zoom"
+              onClick={() => {
+                (setInnerFull(false), setInnerStyle(innerDefultStyle));
+              }}
+            >
+              문서축소
+            </li>
+          ) : (
+            <li
+              className="zoom"
+              onClick={() => {
+                (setInnerFull(true), setInnerStyle(innerFullStyle));
+              }}
+            >
+              문서확대
+            </li>
+          )}
         </ul>
       </div>
 
       {/* 문서 영역 */}
       <div className="inner">
         <div className="inner_item">
-          <div className="paper">{/* 여기에 이력서 내용 */}</div>
+          <div className="paper" style={innerStyle}>
+            {/* 여기에 이력서 내용 */}
+          </div>
         </div>
       </div>
     </ResumeModalWrap>
