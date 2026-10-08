@@ -988,7 +988,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   }
-`,ov=Pi(J_.div)`
+`;Pi(J_.div)`
   position: fixed;
   z-index: 950;
   top: 0px;
@@ -997,13 +997,21 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   .inner {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    height: 30%;
+    width: auto;
+    height: 20%;
+    overflow: hidden;
     background-color: #f3f1e8;
+    border: 1px solid #184bc1;
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.2),
+      0 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
     .title_bar {
       display: flex;
       justify-content: space-between;
@@ -1040,8 +1048,53 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       }
     }
     .content {
+      flex: 1;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 32px;
+      padding: 0px 5%;
+      .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 5%;
+        width: auto;
+        height: 100%;
+        img {
+          width: 50px;
+          height: auto;
+        }
+      }
+      .content_text {
+        align-content: center;
+        height: 100%;
+        padding: 0px 3%;
+        p {
+          &:nth-of-type(2) {
+            i {
+              font-weight: bold;
+              font-style: normal;
+              color: #2259d7;
+            }
+          }
+        }
+      }
+    }
+    .button_area {
+      display: flex;
+      justify-content: center;
+      flex: 0.3;
+      width: 100%;
+      height: 50px;
+      align-content: center;
+      button {
+        width: auto;
+        height: 35px;
+        padding: 0px 3%;
+        border: 1px solid #000;
+      }
     }
   }
-`,sv=({clickData:e,setIsModal:t,setIsProgram:n})=>{let r={width:`40%`,height:`60%`},i={width:`100%`,height:`100%`,transform:`translate(267px, 55px)`,top:`0px`,left:`0px`},[a,o]=(0,S.useState)(!1),s=Z_(),[c,l]=(0,S.useState)(r),u=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(iv,{drag:!0,dragControls:s,dragListener:!1,dragMomentum:!1,style:c,children:[(0,F.jsxs)(`div`,{className:`folder_bar`,onPointerDown:e=>{s.start(e)},children:[(0,F.jsxs)(`div`,{className:`top_bar`,children:[(0,F.jsxs)(`div`,{className:`icon_name`,children:[(0,F.jsx)(`div`,{className:`icon_img`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`folder_name`,children:e.title})]}),(0,F.jsxs)(`div`,{className:`folder_button`,children:[(0,F.jsx)(`button`,{className:`minimal`}),a?(0,F.jsx)(`button`,{className:`restore`,onClick:()=>{l(r),o(!1)}}):(0,F.jsx)(`button`,{className:`full`,onClick:()=>{l(i),o(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>t(!1)})]})]}),(0,F.jsxs)(`div`,{className:`folder_funtion_bar`,children:[(0,F.jsxs)(`ul`,{className:`file_func_top`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`편집`}),(0,F.jsx)(`li`,{children:`보기`}),(0,F.jsx)(`li`,{children:`즐겨찾기`}),(0,F.jsx)(`li`,{children:`도구`}),(0,F.jsx)(`li`,{children:`도움말`})]}),(0,F.jsxs)(`ul`,{className:`file_func_bottom`,children:[(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``}),(0,F.jsx)(`span`,{children:`뒤로`})]}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``})}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Up.png`),alt:``})}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Search.png`),alt:``}),(0,F.jsx)(`span`,{children:`검색`})]}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/FolderView.png`),alt:``}),(0,F.jsx)(`span`,{children:`폴더`})]})]})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`ul`,{className:`item_list`,children:e.list?(0,F.jsx)(F.Fragment,{children:e.list.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>n({state:!0,index:e.id}),children:[(0,F.jsx)(`div`,{className:`icon_img_box`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},e.id))}):(0,F.jsx)(F.Fragment,{})})})]})},cv=({setIsModal:e})=>{let[t,n]=(0,S.useState)(!1),[r,i]=(0,S.useState)(!1),a=Z_(),o={width:`80%`,height:`80%`},s={width:`50%`},c={width:`100%`},l={width:`100%`,height:`100%`,transform:`translate(0px, 0px)`,top:`0px`,left:`0px`},[u,d]=(0,S.useState)(o),[f,p]=(0,S.useState)(s);return(0,F.jsxs)(av,{style:u,drag:!0,dragControls:a,dragListener:!1,dragMomentum:!1,children:[(0,F.jsxs)(`div`,{className:`resume_bar`,onPointerDown:e=>{a.start(e)},children:[(0,F.jsxs)(`div`,{className:`word_top`,children:[(0,F.jsxs)(`div`,{className:`word_info`,children:[(0,F.jsx)(`div`,{className:`word_logo`,children:`W`}),(0,F.jsxs)(`div`,{className:`auto_save`,children:[(0,F.jsx)(`span`,{children:`자동 저장`}),(0,F.jsx)(`button`,{className:`toggle`,children:(0,F.jsx)(`span`,{})})]}),(0,F.jsx)(`button`,{className:`save`,"aria-label":`저장`,children:(0,F.jsx)(Ui.saveFilled,{})}),(0,F.jsx)(`button`,{className:`arrow_wise`,"aria-label":`다시 실행`,children:(0,F.jsx)(Ui.arrowBack,{})}),(0,F.jsx)(`button`,{className:`arrow_back`,"aria-label":`실행 취소`,children:(0,F.jsx)(Ui.arrowWise,{})}),(0,F.jsxs)(`div`,{className:`default_name`,children:[(0,F.jsx)(`span`,{children:`문서1`}),(0,F.jsx)(`span`,{children:`- Word`})]})]}),(0,F.jsxs)(`div`,{className:`word_right`,children:[(0,F.jsxs)(`div`,{className:`search`,children:[(0,F.jsx)(`span`,{className:`search_icon`}),(0,F.jsx)(`span`,{className:`search_text`,children:`검색`})]}),(0,F.jsx)(`button`,{className:`login`,children:`로그인`}),(0,F.jsxs)(`div`,{className:`window_button`,children:[(0,F.jsx)(`button`,{className:`minimal`,"aria-label":`최소화`,children:(0,F.jsx)(`span`,{})}),t?(0,F.jsx)(`button`,{className:`restore`,"aria-label":`축소`,onClick:()=>{d(o),n(!1)}}):(0,F.jsx)(`button`,{className:`max`,"aria-label":`복원`,onClick:()=>{d(l),n(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>{e(!1)},children:(0,F.jsx)(`span`,{})})]})]})]}),(0,F.jsxs)(`ul`,{className:`word_bottom`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`홈`}),(0,F.jsx)(`li`,{children:`삽입`}),(0,F.jsx)(`li`,{children:`디자인`}),(0,F.jsx)(`li`,{children:`레이아웃`}),(0,F.jsx)(`li`,{children:`참조`}),(0,F.jsx)(`li`,{children:`편지`}),(0,F.jsx)(`li`,{children:`검토`}),(0,F.jsx)(`li`,{children:`보기`}),r?(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!1),p(s)},children:`문서축소`}):(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!0),p(c)},children:`문서확대`})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`div`,{className:`inner_item`,children:(0,F.jsx)(`div`,{className:`paper`,style:f})})})]})},lv=({thisProgramData:e})=>(0,F.jsx)(F.Fragment,{}),uv=()=>(0,F.jsx)(ov,{children:(0,F.jsxs)(`div`,{className:`inner`,children:[(0,F.jsxs)(`div`,{className:`title_bar`,children:[(0,F.jsx)(`p`,{children:`Windows XP`}),` `,(0,F.jsx)(`button`,{className:`close_btn`})]}),(0,F.jsxs)(`div`,{className:`content`,children:[(0,F.jsx)(`div`,{className:`icon`,children:(0,F.jsx)(`img`,{src:(e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`)(`/icon/Information.png`),alt:`경고이미지`})}),(0,F.jsxs)(`p`,{children:[`해당 응용프로그램을 실행할 수 없습니다. `,(0,F.jsx)(`br`,{}),` 현재 프로그램이 이미 실행 중이거나 파일을 찾을 수 없습니다.`]})]}),(0,F.jsx)(`div`,{className:`button_area`,children:(0,F.jsx)(`button`,{className:`ok_btn`,children:`확인`})})]})}),dv=()=>{let e=tv.iconDataList,[t,n]=(0,S.useState)(e),r=nv.toolsDataList,[i,a]=(0,S.useState)(r),[o,s]=(0,S.useState)(null),[c,l]=(0,S.useState)(null),[u,d]=(0,S.useState)(!1),[f,p]=(0,S.useState)(null);console.log(`클릭데이터`,c);let m=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return console.log(`이즈프로그램`,f),console.log(`프로그램데이터`,i),(0,F.jsxs)(ev,{children:[(()=>{if(!u||!c)return null;if(c.class===`folder`)return(0,F.jsx)(sv,{clickData:c,setIsModal:d,setIsProgram:p});if(c.class===`file`)switch(c.detail){case`word`:return(0,F.jsx)(cv,{setIsModal:d});case`picture`:return null;default:return null}return null})(),(()=>{if(!f)return null;let e=i.find(e=>e.id===f.index);if(!e)return null;switch(e.func){case`1`:return(0,F.jsx)(lv,{thisProgramData:e});case`0`:return(0,F.jsx)(uv,{});default:return null}})(),(0,F.jsx)(`ul`,{className:`icon_list_box`,children:t.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>{s(t),l(e),d(!0)},className:o===t?`clickIcon`:``,children:[(0,F.jsxs)(`div`,{className:`icon_img_box`,children:[e.class===`shot`?(0,F.jsx)(`a`,{href:e.address,children:(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`})}):(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`}),e.class===`shot`?(0,F.jsx)(`div`,{className:`shotcutIcon`}):``]}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},t))})]})},fv=J_,pv=()=>{let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{let e=setTimeout(()=>{t(!1)},2e3);return()=>clearTimeout(e)},[]),(0,F.jsxs)($_,{children:[(0,F.jsx)(ng,{children:e&&(0,F.jsx)(fv.div,{className:`fade_bg`,initial:{opacity:1},exit:{opacity:0},transition:{duration:.7}})}),(0,F.jsx)(dv,{})]})};function mv(){let[e,t]=(0,S.useState)(null);return(0,F.jsx)(Fi,{children:(0,F.jsxs)(Jt,{children:[(0,F.jsx)(Kt,{element:(0,F.jsx)(Li,{}),children:(0,F.jsx)(Kt,{path:`/`,element:(0,F.jsx)(ps,{})})}),(0,F.jsx)(Kt,{element:(0,F.jsx)(Bi,{bottomBar:e,setBottomBar:t}),children:(0,F.jsx)(Kt,{path:`/main`,element:(0,F.jsx)(pv,{setBottomBar:t})})})]})})}(0,Wn.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(S.StrictMode,{children:(0,F.jsx)(Mn,{basename:`/windowStyle_portfolio`,children:(0,F.jsx)(mv,{})})}));
+`;var ov=Pi(J_.div)``,sv=({clickData:e,setIsModal:t,setIsProgram:n})=>{let r={width:`40%`,height:`60%`},i={width:`100%`,height:`100%`,transform:`translate(267px, 55px)`,top:`0px`,left:`0px`},[a,o]=(0,S.useState)(!1),s=Z_(),[c,l]=(0,S.useState)(r),u=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(iv,{drag:!0,dragControls:s,dragListener:!1,dragMomentum:!1,style:c,children:[(0,F.jsxs)(`div`,{className:`folder_bar`,onPointerDown:e=>{s.start(e)},children:[(0,F.jsxs)(`div`,{className:`top_bar`,children:[(0,F.jsxs)(`div`,{className:`icon_name`,children:[(0,F.jsx)(`div`,{className:`icon_img`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`folder_name`,children:e.title})]}),(0,F.jsxs)(`div`,{className:`folder_button`,children:[(0,F.jsx)(`button`,{className:`minimal`}),a?(0,F.jsx)(`button`,{className:`restore`,onClick:()=>{l(r),o(!1)}}):(0,F.jsx)(`button`,{className:`full`,onClick:()=>{l(i),o(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>t(!1)})]})]}),(0,F.jsxs)(`div`,{className:`folder_funtion_bar`,children:[(0,F.jsxs)(`ul`,{className:`file_func_top`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`편집`}),(0,F.jsx)(`li`,{children:`보기`}),(0,F.jsx)(`li`,{children:`즐겨찾기`}),(0,F.jsx)(`li`,{children:`도구`}),(0,F.jsx)(`li`,{children:`도움말`})]}),(0,F.jsxs)(`ul`,{className:`file_func_bottom`,children:[(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``}),(0,F.jsx)(`span`,{children:`뒤로`})]}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``})}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Up.png`),alt:``})}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Search.png`),alt:``}),(0,F.jsx)(`span`,{children:`검색`})]}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/FolderView.png`),alt:``}),(0,F.jsx)(`span`,{children:`폴더`})]})]})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`ul`,{className:`item_list`,children:e.list?(0,F.jsx)(F.Fragment,{children:e.list.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>n({state:!0,index:e.id}),children:[(0,F.jsx)(`div`,{className:`icon_img_box`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},e.id))}):(0,F.jsx)(F.Fragment,{})})})]})},cv=({setIsModal:e})=>{let[t,n]=(0,S.useState)(!1),[r,i]=(0,S.useState)(!1),a=Z_(),o={width:`80%`,height:`80%`},s={width:`50%`},c={width:`100%`},l={width:`100%`,height:`100%`,transform:`translate(0px, 0px)`,top:`0px`,left:`0px`},[u,d]=(0,S.useState)(o),[f,p]=(0,S.useState)(s);return(0,F.jsxs)(av,{style:u,drag:!0,dragControls:a,dragListener:!1,dragMomentum:!1,children:[(0,F.jsxs)(`div`,{className:`resume_bar`,onPointerDown:e=>{a.start(e)},children:[(0,F.jsxs)(`div`,{className:`word_top`,children:[(0,F.jsxs)(`div`,{className:`word_info`,children:[(0,F.jsx)(`div`,{className:`word_logo`,children:`W`}),(0,F.jsxs)(`div`,{className:`auto_save`,children:[(0,F.jsx)(`span`,{children:`자동 저장`}),(0,F.jsx)(`button`,{className:`toggle`,children:(0,F.jsx)(`span`,{})})]}),(0,F.jsx)(`button`,{className:`save`,"aria-label":`저장`,children:(0,F.jsx)(Ui.saveFilled,{})}),(0,F.jsx)(`button`,{className:`arrow_wise`,"aria-label":`다시 실행`,children:(0,F.jsx)(Ui.arrowBack,{})}),(0,F.jsx)(`button`,{className:`arrow_back`,"aria-label":`실행 취소`,children:(0,F.jsx)(Ui.arrowWise,{})}),(0,F.jsxs)(`div`,{className:`default_name`,children:[(0,F.jsx)(`span`,{children:`문서1`}),(0,F.jsx)(`span`,{children:`- Word`})]})]}),(0,F.jsxs)(`div`,{className:`word_right`,children:[(0,F.jsxs)(`div`,{className:`search`,children:[(0,F.jsx)(`span`,{className:`search_icon`}),(0,F.jsx)(`span`,{className:`search_text`,children:`검색`})]}),(0,F.jsx)(`button`,{className:`login`,children:`로그인`}),(0,F.jsxs)(`div`,{className:`window_button`,children:[(0,F.jsx)(`button`,{className:`minimal`,"aria-label":`최소화`,children:(0,F.jsx)(`span`,{})}),t?(0,F.jsx)(`button`,{className:`restore`,"aria-label":`축소`,onClick:()=>{d(o),n(!1)}}):(0,F.jsx)(`button`,{className:`max`,"aria-label":`복원`,onClick:()=>{d(l),n(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>{e(!1)},children:(0,F.jsx)(`span`,{})})]})]})]}),(0,F.jsxs)(`ul`,{className:`word_bottom`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`홈`}),(0,F.jsx)(`li`,{children:`삽입`}),(0,F.jsx)(`li`,{children:`디자인`}),(0,F.jsx)(`li`,{children:`레이아웃`}),(0,F.jsx)(`li`,{children:`참조`}),(0,F.jsx)(`li`,{children:`편지`}),(0,F.jsx)(`li`,{children:`검토`}),(0,F.jsx)(`li`,{children:`보기`}),r?(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!1),p(s)},children:`문서축소`}):(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!0),p(c)},children:`문서확대`})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`div`,{className:`inner_item`,children:(0,F.jsx)(`div`,{className:`paper`,style:f})})})]})},lv=({thisProgramData:e})=>{let[t,n]=(0,S.useState)(!1);return(0,S.useEffect)(()=>{setInterval(()=>{n(!0)},1500)}),(0,F.jsx)(ov,{children:(0,F.jsx)(`div`,{className:`inner`})})},uv=()=>{let e=tv.iconDataList,[t,n]=(0,S.useState)(e),r=nv.toolsDataList,[i,a]=(0,S.useState)(r),[o,s]=(0,S.useState)(null),[c,l]=(0,S.useState)(null),[u,d]=(0,S.useState)(!1),[f,p]=(0,S.useState)(null);console.log(`클릭데이터`,c);let m=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return console.log(`이즈프로그램`,f),console.log(`프로그램데이터`,i),(0,F.jsxs)(ev,{children:[(()=>{if(!u||!c)return null;if(c.class===`folder`)return(0,F.jsx)(sv,{clickData:c,setIsModal:d,setIsProgram:p});if(c.class===`file`)switch(c.detail){case`word`:return(0,F.jsx)(cv,{setIsModal:d});case`picture`:return null;default:return null}return null})(),(()=>{if(!f)return null;let e=i.find(e=>e.id===f.index);if(!e)return null;switch(e.func){case`1`:return(0,F.jsx)(lv,{thisProgramData:e,setIsProgram:p});case`0`:return(0,F.jsx)(WarningModal,{setIsProgram:p});default:return null}})(),(0,F.jsx)(`ul`,{className:`icon_list_box`,children:t.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>{s(t),l(e),d(!0)},className:o===t?`clickIcon`:``,children:[(0,F.jsxs)(`div`,{className:`icon_img_box`,children:[e.class===`shot`?(0,F.jsx)(`a`,{href:e.address,children:(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`})}):(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`}),e.class===`shot`?(0,F.jsx)(`div`,{className:`shotcutIcon`}):``]}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},t))})]})},dv=J_,fv=()=>{let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{let e=setTimeout(()=>{t(!1)},2e3);return()=>clearTimeout(e)},[]),(0,F.jsxs)($_,{children:[(0,F.jsx)(ng,{children:e&&(0,F.jsx)(dv.div,{className:`fade_bg`,initial:{opacity:1},exit:{opacity:0},transition:{duration:.7}})}),(0,F.jsx)(uv,{})]})};function pv(){let[e,t]=(0,S.useState)(null);return(0,F.jsx)(Fi,{children:(0,F.jsxs)(Jt,{children:[(0,F.jsx)(Kt,{element:(0,F.jsx)(Li,{}),children:(0,F.jsx)(Kt,{path:`/`,element:(0,F.jsx)(ps,{})})}),(0,F.jsx)(Kt,{element:(0,F.jsx)(Bi,{bottomBar:e,setBottomBar:t}),children:(0,F.jsx)(Kt,{path:`/main`,element:(0,F.jsx)(fv,{setBottomBar:t})})})]})})}(0,Wn.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(S.StrictMode,{children:(0,F.jsx)(Mn,{basename:`/windowStyle_portfolio`,children:(0,F.jsx)(pv,{})})}));
