@@ -4,8 +4,7 @@ import IconData from "../../assets/data/IconData.json";
 import ToolsData from "../../assets/data/ToolsData.json";
 import FolderModal from "../common/FolderModal";
 import ResumeModal from "../common/ResumeModal";
-import ProgramModal from "../common/ProgramModal";
-import WarningModal from "../common/WarningModal";
+import ProgramModal from "../../page/main/Program";
 
 const WindowView = () => {
   // 아이콘데이터 가져오기
