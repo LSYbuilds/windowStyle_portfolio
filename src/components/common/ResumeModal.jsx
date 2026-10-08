@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { ResumeModalWrap } from "../../style/common/Modal_styled";
 import { motion, useDragControls } from "framer-motion";
 import Icon from "./SvgComponents";
-const ResumeModal = () => {
+const ResumeModal = ({ setIsModal }) => {
+  const [full, setFull] = useState(false);
   const dragControls = useDragControls();
+  const defaultStyle = { width: "80%", height: "80%" };
+  const fullStyle = {
+    width: "100%",
+    height: "100%",
+    transform: "translate(0px, 0px)",
+    top: "0px",
+    left: "0px",
+  };
+  const [modalStyle, setModalStyle] = useState(defaultStyle);
   return (
     <ResumeModalWrap
+      style={modalStyle}
       drag
       dragControls={dragControls}
       dragListener={false}
       dragMomentum={false}
     >
-      <div className="resume_bar">
+      <div
+        className="resume_bar"
+        onPointerDown={(e) => {
+          dragControls.start(e);
+        }}
+      >
         {/* 상단 영역 */}
         <div className="word_top">
           <div className="word_info">
@@ -55,11 +71,15 @@ const ResumeModal = () => {
                 <span></span>
               </button>
 
-              <button className="restore" aria-label="복원">
+              <button
+                className="restore"
+                aria-label="복원"
+                onClick={() => setModalStyle(fullStyle)}
+              >
                 <span></span>
               </button>
 
-              <button className="close" aria-label="닫기">
+              <button className="close" onClick={() => setIsModal(false)}>
                 <span></span>
               </button>
             </div>

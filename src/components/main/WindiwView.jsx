@@ -26,7 +26,7 @@ const WindowView = () => {
     if (clickData.class === "file") {
       switch (clickData.detail) {
         case "word":
-          return <ResumeModal />;
+          return <ResumeModal setIsModal={setIsModal} />;
         case "picture":
           return null;
         default:

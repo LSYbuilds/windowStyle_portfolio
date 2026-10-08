@@ -77,6 +77,9 @@ export const FolderModalWrap = styled(motion.div)`
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
+          &:hover {
+            opacity: 0.8;
+          }
         }
         .minimal {
           background-image: url(${publicPath("/icon/Minimize.png")});
@@ -354,100 +357,20 @@ export const ResumeModalWrap = styled(motion.div)`
   .arrow_wise,
   .arrow_back,
   .drop_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 26px;
     height: 26px;
-
-    padding: 0;
-
-    border: 0;
-
-    background: transparent;
-
     position: relative;
-
     cursor: default;
-  }
-
-  /* 저장 아이콘 */
-
-  .save::before {
-    content: "";
-
-    position: absolute;
-
-    width: 15px;
-    height: 15px;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    background-color: #9b45b5;
-
-    border-radius: 2px;
-  }
-
-  .save::after {
-    content: "";
-
-    position: absolute;
-
-    width: 7px;
-    height: 5px;
-
-    left: 50%;
-    top: 5px;
-
-    transform: translateX(-50%);
-
-    background-color: #fff;
-  }
-
-  /* 실행 취소 */
-
-  .arrow_back::before {
-    content: "↶";
-
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -55%);
-
-    font-size: 23px;
-    font-weight: 300;
-
-    color: #858585;
-  }
-
-  /* 다시 실행 */
-
-  .arrow_wise::before {
-    content: "↷";
-
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -55%);
-
-    font-size: 23px;
-    font-weight: 300;
-
-    color: #858585;
-  }
-
-  /* 드롭다운 */
-
-  .drop_button::before {
-    content: "⌄";
-
-    font-size: 15px;
-
-    color: #555;
+    border: none;
+    background: transparent;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   /* 접근성용 텍스트 숨기기 */

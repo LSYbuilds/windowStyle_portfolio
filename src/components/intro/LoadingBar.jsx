@@ -15,7 +15,7 @@ const LoadingBar = () => {
   useEffect(() => {
     setInterval(() => {
       navigate("/main");
-    }, 3500);
+    }, 1500);
   });
   return (
     <LoadingBarWrap>

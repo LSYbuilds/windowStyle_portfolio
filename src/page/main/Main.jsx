@@ -20,7 +20,7 @@ const Main = () => {
             className="fade_bg"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 0.7 }}
           />
         )}
       </AnimatePresence>

@@ -4,7 +4,13 @@ import { motion, useDragControls } from "framer-motion";
 
 const FolderModal = ({ clickData, setIsModal }) => {
   const defaultStyle = { width: "40%", height: "60%" };
-  const fullStyle = { width: "100%", height: "100%", top: "0px", left: "0px" };
+  const fullStyle = {
+    width: "100%",
+    height: "100%",
+    transform: "translate(267px, 55px)",
+    top: "0px",
+    left: "0px",
+  };
   const [full, setFull] = useState(false);
   const dragControls = useDragControls();
   const [modalStyle, setModalStyle] = useState(defaultStyle);
