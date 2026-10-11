@@ -56,6 +56,9 @@ export const WindowBottomWrap = styled.div`
           font-weight: bold;
           color: #fff;
           font-size: 1.125em;
+          &:before {
+            content: "시작";
+          }
         }
         &:hover {
           background: linear-gradient(
@@ -63,6 +66,43 @@ export const WindowBottomWrap = styled.div`
             #4db84b 89%,
             rgba(24, 91, 58, 1) 100%
           );
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    height: 60px;
+    .inner {
+      background-color: #2259d7;
+      justify-content: center;
+      .quick_menu_box {
+        position: relative;
+        .quick_menu {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 100%;
+          width: 60px;
+          height: 60px;
+          gap: 0px;
+          justify-content: center;
+          background: #48a547;
+          background: linear-gradient(none);
+          padding: 0px 0px;
+          .quick_img {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+          span {
+            &:before {
+              content: "";
+            }
+          }
         }
       }
     }

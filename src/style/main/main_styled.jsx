@@ -70,4 +70,17 @@ export const WindowViewWrap = styled.div`
       background-color: #5656d3;
     }
   }
+
+  @media (max-width: 768px) {
+    .icon_list_box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      align-content: start;
+      gap: 16px;
+
+      li {
+        width: 80px;
+      }
+    }
+  }
 `;

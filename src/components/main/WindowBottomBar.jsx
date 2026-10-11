@@ -14,7 +14,7 @@ const WindowBottomBar = ({ bottomBar, setBottomBar }) => {
             <div className="quick_img">
               <img src={publicPath("/bg/logo_clear.png")} alt="빠른메뉴로고" />
             </div>
-            <span>시작</span>
+            <span></span>
           </div>
           <div className="open_tab_list"></div>
         </section>

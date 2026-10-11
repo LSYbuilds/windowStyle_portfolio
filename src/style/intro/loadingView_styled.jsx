@@ -33,7 +33,40 @@ export const LoadingWrap = styled.div`
           gap: 8px;
         }
       }
-      .bottoM-text {
+    }
+  }
+  @media (max-width: 768px) {
+    .inner {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 32px;
+      font-size: 1em;
+      .text_box_anime {
+        justify-content: flex-start;
+        .first_text {
+          text-align: center;
+        }
+        .sec_text {
+          text-align: center;
+        }
+        .bottom_text {
+          margin-top: 30px;
+          text-align: center;
+        }
+      }
+      .dos_img {
+        order: -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .img_box {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          img {
+            width: 40%;
+          }
+        }
       }
     }
   }

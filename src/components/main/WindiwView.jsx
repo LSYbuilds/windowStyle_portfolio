@@ -5,6 +5,7 @@ import ToolsData from "../../assets/data/ToolsData.json";
 import FolderModal from "../common/FolderModal";
 import ResumeModal from "../common/ResumeModal";
 import ProgramModal from "../../page/main/Program";
+import WarningModal from "../common/WarningModal";
 
 const WindowView = () => {
   // 아이콘데이터 가져오기
@@ -94,7 +95,7 @@ const WindowView = () => {
           >
             <div className="icon_img_box">
               {item.class === "shot" ? (
-                <a href={item.address}>
+                <a href={item.address} target="_blank">
                   <img src={publicPath(item.src)} alt="아이콘이미지" />
                 </a>
               ) : (
