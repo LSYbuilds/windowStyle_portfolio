@@ -67,6 +67,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           font-weight: bold;
           color: #fff;
           font-size: 1.125em;
+          &:before {
+            content: "시작";
+          }
         }
         &:hover {
           background: linear-gradient(
@@ -78,7 +81,44 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       }
     }
   }
-`,zi=({bottomBar:e,setBottomBar:t})=>(0,F.jsx)(Ri,{children:(0,F.jsxs)(`div`,{className:`inner`,children:[(0,F.jsxs)(`section`,{className:`quick_menu_box`,children:[(0,F.jsxs)(`div`,{className:`quick_menu`,children:[(0,F.jsx)(`div`,{className:`quick_img`,children:(0,F.jsx)(`img`,{src:(e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`)(`/bg/logo_clear.png`),alt:`빠른메뉴로고`})}),(0,F.jsx)(`span`,{children:`시작`})]}),(0,F.jsx)(`div`,{className:`open_tab_list`})]}),(0,F.jsx)(`section`,{className:`tool_box`})]})}),Bi=({bottomBar:e,setBottomBar:t})=>(0,F.jsxs)(F.Fragment,{children:[(0,F.jsx)(`main`,{children:(0,F.jsx)(Gt,{})}),(0,F.jsx)(zi,{bottomBar:e,setBottomBar:t})]}),Vi=Pi.div`
+  @media (max-width: 768px) {
+    height: 60px;
+    .inner {
+      background-color: #2259d7;
+      justify-content: center;
+      .quick_menu_box {
+        position: relative;
+        .quick_menu {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 100%;
+          width: 60px;
+          height: 60px;
+          gap: 0px;
+          justify-content: center;
+          background: #48a547;
+          background: linear-gradient(none);
+          padding: 0px 0px;
+          .quick_img {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+          span {
+            &:before {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+`,zi=({bottomBar:e,setBottomBar:t})=>(0,F.jsx)(Ri,{children:(0,F.jsxs)(`div`,{className:`inner`,children:[(0,F.jsxs)(`section`,{className:`quick_menu_box`,children:[(0,F.jsxs)(`div`,{className:`quick_menu`,children:[(0,F.jsx)(`div`,{className:`quick_img`,children:(0,F.jsx)(`img`,{src:(e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`)(`/bg/logo_clear.png`),alt:`빠른메뉴로고`})}),(0,F.jsx)(`span`,{})]}),(0,F.jsx)(`div`,{className:`open_tab_list`})]}),(0,F.jsx)(`section`,{className:`tool_box`})]})}),Bi=({bottomBar:e,setBottomBar:t})=>(0,F.jsxs)(F.Fragment,{children:[(0,F.jsx)(`main`,{children:(0,F.jsx)(Gt,{})}),(0,F.jsx)(zi,{bottomBar:e,setBottomBar:t})]}),Vi=Pi.div`
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -189,7 +229,40 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           gap: 8px;
         }
       }
-      .bottoM-text {
+    }
+  }
+  @media (max-width: 768px) {
+    .inner {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 32px;
+      font-size: 1em;
+      .text_box_anime {
+        justify-content: flex-start;
+        .first_text {
+          text-align: center;
+        }
+        .sec_text {
+          text-align: center;
+        }
+        .bottom_text {
+          margin-top: 30px;
+          text-align: center;
+        }
+      }
+      .dos_img {
+        order: -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .img_box {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          img {
+            width: 40%;
+          }
+        }
       }
     }
   }
@@ -363,6 +436,19 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     }
     .clickIcon {
       background-color: #5656d3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .icon_list_box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      align-content: start;
+      gap: 16px;
+
+      li {
+        width: 80px;
+      }
     }
   }
 `,tv={iconDataList:[{id:`1`,title:`내 컴퓨터`,src:`/icon/MyComputer.png`,func:`1`,class:`folder`},{id:`2`,title:`인터넷`,src:`/icon/InternetExplorer.png`,func:`1`,class:`internet`},{id:`3`,title:`내 문서`,src:`/icon/MyDocuments.png`,func:`1`,class:`folder`},{id:`4`,title:`휴지통`,src:`/icon/RecycleBin.png`,func:`1`,class:`file`},{id:`5`,title:`음악`,src:`/icon/MyMusic.png`,func:`1`,class:`folder`},{id:`6`,title:`사진`,src:`/icon/MyPictures.png`,func:`1`,class:`folder`},{id:`7`,title:`영상`,src:`/icon/MyVideos.png`,func:`1`,class:`folder`},{id:`8`,title:`게임메카`,src:`/icon/gameMeca.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/gamemecarebulding/`},{id:`9`,title:`부산광역시`,src:`/icon/busan.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/clonebusanhome/`},{id:`10`,title:`BangBoo키오스크`,src:`/icon/bangboo.png`,func:`1`,class:`shot`,address:`https://lsybuilds.github.io/Simple_Kiosk/`},{id:`11`,title:`사용툴`,src:`/icon/FolderClosed.png`,func:`1`,class:`folder`,list:[{id:`1`,title:`HTML5`,src:`/icon/html5.png`,func:`1`,class:`file`},{id:`2`,title:`CSS`,src:`/icon/css.png`,func:`1`,class:`file`},{id:`3`,title:`Adobe Photoshop`,src:`/icon/Adobe_Photoshop.png`,func:`1`,class:`file`},{id:`4`,title:`Figma`,src:`/icon/Figma-logo.png`,func:`1`,class:`file`},{id:`5`,title:`REACT`,src:`/icon/React.png`,func:`1`,class:`file`},{id:`6`,title:`JavaScript`,src:`/icon/JavaScript.png`,func:`1`,class:`file`},{id:`7`,title:`GitHub`,src:`/icon/GitHub.png`,func:`1`,class:`file`}]},{id:`12`,title:`내 사진`,src:`/icon/JPG.png`,func:`1`,class:`file`,detail:`picture`},{id:`13`,title:`이력서`,src:`/icon/word.png`,func:`1`,class:`file`,detail:`word`}]},nv={toolsDataList:[{id:`1`,title:`HTML5`,src:`/icon/html5.png`,func:`1`,imgSlide:[{id:`1`,src:``},{id:`2`,src:``},{id:`3`,src:``}],category:[{id:`1`,title:`시멘틱 마크업`},{id:`2`,title:`웹 표준`},{id:`3`,title:`반응형`}],desc:[{id:`1`,title:`Semantic Markup`,subtitle:`의미와 구조를 고려한 시맨틱 마크업`,text1:`HTML5의 시맨틱 요소를 활용하여 콘텐츠의 역할과 문서 구조를 명확하게 표현할 수 있습니다. 단순히 화면을 구현하는 것을 넘어, 개발자와 브라우저가 콘텐츠의 의미를 쉽게 이해할 수 있도록 구조적인 마크업을 작성할 수 있으며 .header, nav, main, section, article, footer 등의 요소를 콘텐츠의 목적에 맞게 구분하여 사용하며, 이를 통해 코드의 가독성과 유지보수성을 높입니다.`,text2:`시맨틱 태그는 개발자만을 위한 것이 아니라 브라우저, 검색 엔진, 보조 기술이 콘텐츠 구조를 이해하는 데에도 도움을 주는 걸로 알고 있습니다.`,text3:`예를 들어 <button>이 필요한 상황에서 단순한 <div>에 클릭 이벤트를 연결하기보다 <button>을 사용하면 버튼이라는 의미가 명확해지고, 키보드 접근이나 스크린 리더 등의 기본적인 동작도 자연스럽게 활용할 수 있습니다.`},{id:`2`,title:`Web Standard & Accessibility`,subtitle:`웹 표준을 준수하고 다양한 사용 환경을 고려한 접근성 중심의 개발`,text1:`웹 표준은 특정 브라우저나 디바이스에 종속되지 않고 웹 콘텐츠가 일관된 방식으로 동작할 수 있습니다.`,text2:`HTML 요소를 본래 목적에 맞게 사용하고, 브라우저가 제공하는 기본 동작을 최대한 활용하여 특정 환경에 의존하지 않는 구조를 구현하며 이를 통해 다양한 브라우저와 디바이스에서도 안정적으로 콘텐츠를 이용할 수 있도록 할 수 있습니다.`,text3:`또한 웹 접근성을 고려하여 신체적·환경적 제약이 있는 사용자도 콘텐츠와 기능을 이용할 수 있도록 설계가 가능하며 마우스뿐만 아니라 키보드로도 주요 기능을 사용할 수 있도록 하고, 이미지와 폼 요소에는 적절한 정보를 제공하여 보조 기술을 사용하는 환경에서도 콘텐츠의 의미를 전달할 수 있도록 설계가 가능 합니다.`},{id:`3`,title:`Responsive Structure`,subtitle:`다양한 디바이스를 고려한 유연한 HTML 구조`,text1:`데스크톱뿐만 아니라 태블릿과 모바일 환경에서도 콘텐츠가 자연스럽게 이어질 수 있도록 화면에 종속되지 않는 HTML 구조를 설계할 수 있습니다.`,text2:`CSS Media Query를 활용하여 화면의 크기와 환경에 따라 레이아웃을 단계적으로 변경가능 하며,단순히 모든 요소의 크기를 줄이는 방식이 아니라, 화면이 좁아질수록 콘텐츠의 우선순위를 고려하여 컬럼 수, 간격, 폰트 크기, 내비게이션 등의 UI를 적절하게 변경할 수 있습니다.`,text3:`화면 크기에 따라 단순히 콘텐츠를 축소하는 것이 아니라, 콘텐츠의 우선순위와 사용 환경을 고려하여 레이아웃이 유연하게 변화하도록 설계합니다. HTML과 CSS의 역할을 분리하고, 다양한 디바이스에서도 동일한 콘텐츠와 사용자 경험을 유지할 수 있는 반응형 구조를 구현합니다.`}]},{id:`2`,title:`CSS`,src:`/icon/css.png`,func:`1`,imgSlide:[{id:`1`,src:``},{id:`2`,src:``},{id:`3`,src:``}],category:[{id:`1`,title:`CSS기본`},{id:`2`,title:`SASS`},{id:`3`,title:`Styled Components`}],desc:[{id:`1`,title:`Core Styling & Layout`,subtitle:`기본 스타일링과 레이아웃`,text1:`콘텐츠의 배치 목적에 따라 Flexbox와 CSS Grid를 구분하여 사용합니다.Flexbox는 네비게이션, 버튼 그룹, 카드 내부 정렬 등 1차원적인 요소 배치에 활용하고, Grid는 카드 목록이나 페이지의 전체적인 영역 구성처럼 2차원적인 레이아웃을 구성할 때 활용합니다.`,text2:`relative, absolute, fixed, sticky 등의 Position 속성을 UI의 목적에 맞게 활용합니다.헤더, 모달, 드롭다운, 배지, 오버레이 등 일반적인 문서 흐름에서 벗어나야 하는 요소에는 Position과 z-index를 활용하여 레이어 구조와 시각적 우선순위를 관리합니다.`},{id:`2`,title:`Scalable & Maintainable Styling`,subtitle:`구조적으로 관리하고 재사용하기 위한 CSS 전처리기`,text1:`SASS(SCSS)는 CSS의 반복적인 스타일 선언을 줄이고, 프로젝트의 스타일을 구조적으로 관리하고 재사용하기 위한 CSS 전처리기입니다. 변수, Nesting, Mixin, Function 등의 기능을 활용하여 공통 스타일을 모듈화하고, 프로젝트 규모가 커져도 일관된 스타일 구조를 유지할 수 있도록 작성합니다.`,text2:`특히 색상, 폰트, 여백, 반응형 Breakpoint와 같은 반복적으로 사용되는 값을 변수로 관리하고, 공통 레이아웃이나 미디어 쿼리를 Mixin으로 추상화하여 유지보수성과 코드 재사용성을 높이는 방식으로 활용합니다. 또한 HTML 구조와 유사한 형태로 CSS를 중첩하여 작성함으로써 컴포넌트와 요소 간의 관계를 명확하게 표현합니다.`},{id:`3`,title:`Component-Based Styling & Dynamic UI`,subtitle:`React의 컴포넌트 구조와 스타일을 하나의 단위로 관리`,text1:`React의 컴포넌트 구조와 스타일을 하나의 단위로 관리하기 위해 Styled Components를 활용합니다. 컴포넌트별 스타일을 독립적으로 정의하여 전역 CSS에서 발생할 수 있는 스타일 충돌을 줄이고, UI의 구조와 스타일을 명확하게 분리합니다.`,text2:`Props와 상태값을 활용하여 동일한 컴포넌트에서도 상황에 따라 스타일을 동적으로 변경할 수 있으며, 반복적으로 사용되는 UI 요소는 공통 컴포넌트로 구성하여 스타일의 재사용성과 일관성을 높입니다.`}]},{id:`3`,title:`Adobe Photoshop`,src:`/icon/Adobe_Photoshop.png`,func:`1`,imgThumbnail:[{id:`1`,src:``},{id:`2`,src:``},{id:`3`,src:``}],imgDetail:[{id:`1`,src:``},{id:`2`,src:``},{id:`3`,src:``}]},{id:`4`,title:`Figma`,src:`/icon/Figma-logo.png`,func:`1`},{id:`5`,title:`REACT`,src:`/icon/React.png`,func:`0`},{id:`6`,title:`JavaScript`,src:`/icon/JavaScript.png`,func:`0`},{id:`7`,title:`GitHub`,src:`/icon/GitHub.png`,func:`1`,link:`https://github.com/LSYbuilds?tab=repositories`}]},rv=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`,iv=Pi(J_.div)`
@@ -988,7 +1074,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   }
-`;Pi(J_.div)`
+`,ov=Pi(J_.div)`
   position: fixed;
   z-index: 950;
   top: 0px;
@@ -1097,4 +1183,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       }
     }
   }
-`;var ov=Pi(J_.div)``,sv=({clickData:e,setIsModal:t,setIsProgram:n})=>{let r={width:`40%`,height:`60%`},i={width:`100%`,height:`100%`,transform:`translate(267px, 55px)`,top:`0px`,left:`0px`},[a,o]=(0,S.useState)(!1),s=Z_(),[c,l]=(0,S.useState)(r),u=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(iv,{drag:!0,dragControls:s,dragListener:!1,dragMomentum:!1,style:c,children:[(0,F.jsxs)(`div`,{className:`folder_bar`,onPointerDown:e=>{s.start(e)},children:[(0,F.jsxs)(`div`,{className:`top_bar`,children:[(0,F.jsxs)(`div`,{className:`icon_name`,children:[(0,F.jsx)(`div`,{className:`icon_img`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`folder_name`,children:e.title})]}),(0,F.jsxs)(`div`,{className:`folder_button`,children:[(0,F.jsx)(`button`,{className:`minimal`}),a?(0,F.jsx)(`button`,{className:`restore`,onClick:()=>{l(r),o(!1)}}):(0,F.jsx)(`button`,{className:`full`,onClick:()=>{l(i),o(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>t(!1)})]})]}),(0,F.jsxs)(`div`,{className:`folder_funtion_bar`,children:[(0,F.jsxs)(`ul`,{className:`file_func_top`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`편집`}),(0,F.jsx)(`li`,{children:`보기`}),(0,F.jsx)(`li`,{children:`즐겨찾기`}),(0,F.jsx)(`li`,{children:`도구`}),(0,F.jsx)(`li`,{children:`도움말`})]}),(0,F.jsxs)(`ul`,{className:`file_func_bottom`,children:[(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``}),(0,F.jsx)(`span`,{children:`뒤로`})]}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``})}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Up.png`),alt:``})}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Search.png`),alt:``}),(0,F.jsx)(`span`,{children:`검색`})]}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/FolderView.png`),alt:``}),(0,F.jsx)(`span`,{children:`폴더`})]})]})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`ul`,{className:`item_list`,children:e.list?(0,F.jsx)(F.Fragment,{children:e.list.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>n({state:!0,index:e.id}),children:[(0,F.jsx)(`div`,{className:`icon_img_box`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},e.id))}):(0,F.jsx)(F.Fragment,{})})})]})},cv=({setIsModal:e})=>{let[t,n]=(0,S.useState)(!1),[r,i]=(0,S.useState)(!1),a=Z_(),o={width:`80%`,height:`80%`},s={width:`50%`},c={width:`100%`},l={width:`100%`,height:`100%`,transform:`translate(0px, 0px)`,top:`0px`,left:`0px`},[u,d]=(0,S.useState)(o),[f,p]=(0,S.useState)(s);return(0,F.jsxs)(av,{style:u,drag:!0,dragControls:a,dragListener:!1,dragMomentum:!1,children:[(0,F.jsxs)(`div`,{className:`resume_bar`,onPointerDown:e=>{a.start(e)},children:[(0,F.jsxs)(`div`,{className:`word_top`,children:[(0,F.jsxs)(`div`,{className:`word_info`,children:[(0,F.jsx)(`div`,{className:`word_logo`,children:`W`}),(0,F.jsxs)(`div`,{className:`auto_save`,children:[(0,F.jsx)(`span`,{children:`자동 저장`}),(0,F.jsx)(`button`,{className:`toggle`,children:(0,F.jsx)(`span`,{})})]}),(0,F.jsx)(`button`,{className:`save`,"aria-label":`저장`,children:(0,F.jsx)(Ui.saveFilled,{})}),(0,F.jsx)(`button`,{className:`arrow_wise`,"aria-label":`다시 실행`,children:(0,F.jsx)(Ui.arrowBack,{})}),(0,F.jsx)(`button`,{className:`arrow_back`,"aria-label":`실행 취소`,children:(0,F.jsx)(Ui.arrowWise,{})}),(0,F.jsxs)(`div`,{className:`default_name`,children:[(0,F.jsx)(`span`,{children:`문서1`}),(0,F.jsx)(`span`,{children:`- Word`})]})]}),(0,F.jsxs)(`div`,{className:`word_right`,children:[(0,F.jsxs)(`div`,{className:`search`,children:[(0,F.jsx)(`span`,{className:`search_icon`}),(0,F.jsx)(`span`,{className:`search_text`,children:`검색`})]}),(0,F.jsx)(`button`,{className:`login`,children:`로그인`}),(0,F.jsxs)(`div`,{className:`window_button`,children:[(0,F.jsx)(`button`,{className:`minimal`,"aria-label":`최소화`,children:(0,F.jsx)(`span`,{})}),t?(0,F.jsx)(`button`,{className:`restore`,"aria-label":`축소`,onClick:()=>{d(o),n(!1)}}):(0,F.jsx)(`button`,{className:`max`,"aria-label":`복원`,onClick:()=>{d(l),n(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>{e(!1)},children:(0,F.jsx)(`span`,{})})]})]})]}),(0,F.jsxs)(`ul`,{className:`word_bottom`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`홈`}),(0,F.jsx)(`li`,{children:`삽입`}),(0,F.jsx)(`li`,{children:`디자인`}),(0,F.jsx)(`li`,{children:`레이아웃`}),(0,F.jsx)(`li`,{children:`참조`}),(0,F.jsx)(`li`,{children:`편지`}),(0,F.jsx)(`li`,{children:`검토`}),(0,F.jsx)(`li`,{children:`보기`}),r?(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!1),p(s)},children:`문서축소`}):(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!0),p(c)},children:`문서확대`})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`div`,{className:`inner_item`,children:(0,F.jsx)(`div`,{className:`paper`,style:f})})})]})},lv=({thisProgramData:e})=>{let[t,n]=(0,S.useState)(!1);return(0,S.useEffect)(()=>{setInterval(()=>{n(!0)},1500)}),(0,F.jsx)(ov,{children:(0,F.jsx)(`div`,{className:`inner`})})},uv=()=>{let e=tv.iconDataList,[t,n]=(0,S.useState)(e),r=nv.toolsDataList,[i,a]=(0,S.useState)(r),[o,s]=(0,S.useState)(null),[c,l]=(0,S.useState)(null),[u,d]=(0,S.useState)(!1),[f,p]=(0,S.useState)(null);console.log(`클릭데이터`,c);let m=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return console.log(`이즈프로그램`,f),console.log(`프로그램데이터`,i),(0,F.jsxs)(ev,{children:[(()=>{if(!u||!c)return null;if(c.class===`folder`)return(0,F.jsx)(sv,{clickData:c,setIsModal:d,setIsProgram:p});if(c.class===`file`)switch(c.detail){case`word`:return(0,F.jsx)(cv,{setIsModal:d});case`picture`:return null;default:return null}return null})(),(()=>{if(!f)return null;let e=i.find(e=>e.id===f.index);if(!e)return null;switch(e.func){case`1`:return(0,F.jsx)(lv,{thisProgramData:e,setIsProgram:p});case`0`:return(0,F.jsx)(WarningModal,{setIsProgram:p});default:return null}})(),(0,F.jsx)(`ul`,{className:`icon_list_box`,children:t.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>{s(t),l(e),d(!0)},className:o===t?`clickIcon`:``,children:[(0,F.jsxs)(`div`,{className:`icon_img_box`,children:[e.class===`shot`?(0,F.jsx)(`a`,{href:e.address,children:(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`})}):(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`}),e.class===`shot`?(0,F.jsx)(`div`,{className:`shotcutIcon`}):``]}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},t))})]})},dv=J_,fv=()=>{let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{let e=setTimeout(()=>{t(!1)},2e3);return()=>clearTimeout(e)},[]),(0,F.jsxs)($_,{children:[(0,F.jsx)(ng,{children:e&&(0,F.jsx)(dv.div,{className:`fade_bg`,initial:{opacity:1},exit:{opacity:0},transition:{duration:.7}})}),(0,F.jsx)(uv,{})]})};function pv(){let[e,t]=(0,S.useState)(null);return(0,F.jsx)(Fi,{children:(0,F.jsxs)(Jt,{children:[(0,F.jsx)(Kt,{element:(0,F.jsx)(Li,{}),children:(0,F.jsx)(Kt,{path:`/`,element:(0,F.jsx)(ps,{})})}),(0,F.jsx)(Kt,{element:(0,F.jsx)(Bi,{bottomBar:e,setBottomBar:t}),children:(0,F.jsx)(Kt,{path:`/main`,element:(0,F.jsx)(fv,{setBottomBar:t})})})]})})}(0,Wn.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(S.StrictMode,{children:(0,F.jsx)(Mn,{basename:`/windowStyle_portfolio`,children:(0,F.jsx)(pv,{})})}));
+`,sv=Pi(J_.div)``,cv=({clickData:e,setIsModal:t,setIsProgram:n})=>{let r={width:`40%`,height:`60%`},i={width:`100%`,height:`100%`,transform:`translate(267px, 55px)`,top:`0px`,left:`0px`},[a,o]=(0,S.useState)(!1),s=Z_(),[c,l]=(0,S.useState)(r),u=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return(0,F.jsxs)(iv,{drag:!0,dragControls:s,dragListener:!1,dragMomentum:!1,style:c,children:[(0,F.jsxs)(`div`,{className:`folder_bar`,onPointerDown:e=>{s.start(e)},children:[(0,F.jsxs)(`div`,{className:`top_bar`,children:[(0,F.jsxs)(`div`,{className:`icon_name`,children:[(0,F.jsx)(`div`,{className:`icon_img`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`folder_name`,children:e.title})]}),(0,F.jsxs)(`div`,{className:`folder_button`,children:[(0,F.jsx)(`button`,{className:`minimal`}),a?(0,F.jsx)(`button`,{className:`restore`,onClick:()=>{l(r),o(!1)}}):(0,F.jsx)(`button`,{className:`full`,onClick:()=>{l(i),o(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>t(!1)})]})]}),(0,F.jsxs)(`div`,{className:`folder_funtion_bar`,children:[(0,F.jsxs)(`ul`,{className:`file_func_top`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`편집`}),(0,F.jsx)(`li`,{children:`보기`}),(0,F.jsx)(`li`,{children:`즐겨찾기`}),(0,F.jsx)(`li`,{children:`도구`}),(0,F.jsx)(`li`,{children:`도움말`})]}),(0,F.jsxs)(`ul`,{className:`file_func_bottom`,children:[(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``}),(0,F.jsx)(`span`,{children:`뒤로`})]}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Back.png`),alt:``})}),(0,F.jsx)(`li`,{children:(0,F.jsx)(`img`,{src:u(`/icon/Up.png`),alt:``})}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/Search.png`),alt:``}),(0,F.jsx)(`span`,{children:`검색`})]}),(0,F.jsxs)(`li`,{children:[(0,F.jsx)(`img`,{src:u(`/icon/FolderView.png`),alt:``}),(0,F.jsx)(`span`,{children:`폴더`})]})]})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`ul`,{className:`item_list`,children:e.list?(0,F.jsx)(F.Fragment,{children:e.list.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>n({state:!0,index:e.id}),children:[(0,F.jsx)(`div`,{className:`icon_img_box`,children:(0,F.jsx)(`img`,{src:u(e.src),alt:``})}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},e.id))}):(0,F.jsx)(F.Fragment,{})})})]})},lv=({setIsModal:e})=>{let[t,n]=(0,S.useState)(!1),[r,i]=(0,S.useState)(!1),a=Z_(),o={width:`80%`,height:`80%`},s={width:`50%`},c={width:`100%`},l={width:`100%`,height:`100%`,transform:`translate(0px, 0px)`,top:`0px`,left:`0px`},[u,d]=(0,S.useState)(o),[f,p]=(0,S.useState)(s);return(0,F.jsxs)(av,{style:u,drag:!0,dragControls:a,dragListener:!1,dragMomentum:!1,children:[(0,F.jsxs)(`div`,{className:`resume_bar`,onPointerDown:e=>{a.start(e)},children:[(0,F.jsxs)(`div`,{className:`word_top`,children:[(0,F.jsxs)(`div`,{className:`word_info`,children:[(0,F.jsx)(`div`,{className:`word_logo`,children:`W`}),(0,F.jsxs)(`div`,{className:`auto_save`,children:[(0,F.jsx)(`span`,{children:`자동 저장`}),(0,F.jsx)(`button`,{className:`toggle`,children:(0,F.jsx)(`span`,{})})]}),(0,F.jsx)(`button`,{className:`save`,"aria-label":`저장`,children:(0,F.jsx)(Ui.saveFilled,{})}),(0,F.jsx)(`button`,{className:`arrow_wise`,"aria-label":`다시 실행`,children:(0,F.jsx)(Ui.arrowBack,{})}),(0,F.jsx)(`button`,{className:`arrow_back`,"aria-label":`실행 취소`,children:(0,F.jsx)(Ui.arrowWise,{})}),(0,F.jsxs)(`div`,{className:`default_name`,children:[(0,F.jsx)(`span`,{children:`문서1`}),(0,F.jsx)(`span`,{children:`- Word`})]})]}),(0,F.jsxs)(`div`,{className:`word_right`,children:[(0,F.jsxs)(`div`,{className:`search`,children:[(0,F.jsx)(`span`,{className:`search_icon`}),(0,F.jsx)(`span`,{className:`search_text`,children:`검색`})]}),(0,F.jsx)(`button`,{className:`login`,children:`로그인`}),(0,F.jsxs)(`div`,{className:`window_button`,children:[(0,F.jsx)(`button`,{className:`minimal`,"aria-label":`최소화`,children:(0,F.jsx)(`span`,{})}),t?(0,F.jsx)(`button`,{className:`restore`,"aria-label":`축소`,onClick:()=>{d(o),n(!1)}}):(0,F.jsx)(`button`,{className:`max`,"aria-label":`복원`,onClick:()=>{d(l),n(!0)}}),(0,F.jsx)(`button`,{className:`close`,onClick:()=>{e(!1)},children:(0,F.jsx)(`span`,{})})]})]})]}),(0,F.jsxs)(`ul`,{className:`word_bottom`,children:[(0,F.jsx)(`li`,{children:`파일`}),(0,F.jsx)(`li`,{children:`홈`}),(0,F.jsx)(`li`,{children:`삽입`}),(0,F.jsx)(`li`,{children:`디자인`}),(0,F.jsx)(`li`,{children:`레이아웃`}),(0,F.jsx)(`li`,{children:`참조`}),(0,F.jsx)(`li`,{children:`편지`}),(0,F.jsx)(`li`,{children:`검토`}),(0,F.jsx)(`li`,{children:`보기`}),r?(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!1),p(s)},children:`문서축소`}):(0,F.jsx)(`li`,{className:`zoom`,onClick:()=>{i(!0),p(c)},children:`문서확대`})]})]}),(0,F.jsx)(`div`,{className:`inner`,children:(0,F.jsx)(`div`,{className:`inner_item`,children:(0,F.jsx)(`div`,{className:`paper`,style:f})})})]})},uv=({thisProgramData:e})=>{let[t,n]=(0,S.useState)(!1);return(0,S.useEffect)(()=>{setInterval(()=>{n(!0)},1500)}),(0,F.jsx)(sv,{children:(0,F.jsx)(`div`,{className:`inner`})})},dv=({setIsProgram:e})=>(0,F.jsx)(ov,{children:(0,F.jsxs)(`div`,{className:`inner`,children:[(0,F.jsxs)(`div`,{className:`title_bar`,children:[(0,F.jsx)(`p`,{children:`Windows XP`}),` `,(0,F.jsx)(`button`,{className:`close_btn`,onClick:()=>e(!1)})]}),(0,F.jsxs)(`div`,{className:`content`,children:[(0,F.jsx)(`div`,{className:`icon`,children:(0,F.jsx)(`img`,{src:(e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`)(`/icon/Information.png`),alt:`경고이미지`})}),(0,F.jsxs)(`div`,{className:`content_text`,children:[(0,F.jsx)(`p`,{children:`해당 프로그램을 실행할 수 없습니다.`}),(0,F.jsxs)(`p`,{children:[(0,F.jsx)(`i`,{children:`현재 프로그램이 이미 실행 중이거`}),` 나 파일을 찾을 수 없습니다.`]})]})]}),(0,F.jsx)(`div`,{className:`button_area`,children:(0,F.jsx)(`button`,{className:`ok_btn`,onClick:()=>e(!1),children:`확인`})})]})}),fv=()=>{let e=tv.iconDataList,[t,n]=(0,S.useState)(e),r=nv.toolsDataList,[i,a]=(0,S.useState)(r),[o,s]=(0,S.useState)(null),[c,l]=(0,S.useState)(null),[u,d]=(0,S.useState)(!1),[f,p]=(0,S.useState)(null);console.log(`클릭데이터`,c);let m=e=>`/windowStyle_portfolio/${e.replace(/^\/+/,``)}`;return console.log(`이즈프로그램`,f),console.log(`프로그램데이터`,i),(0,F.jsxs)(ev,{children:[(()=>{if(!u||!c)return null;if(c.class===`folder`)return(0,F.jsx)(cv,{clickData:c,setIsModal:d,setIsProgram:p});if(c.class===`file`)switch(c.detail){case`word`:return(0,F.jsx)(lv,{setIsModal:d});case`picture`:return null;default:return null}return null})(),(()=>{if(!f)return null;let e=i.find(e=>e.id===f.index);if(!e)return null;switch(e.func){case`1`:return(0,F.jsx)(uv,{thisProgramData:e,setIsProgram:p});case`0`:return(0,F.jsx)(dv,{setIsProgram:p});default:return null}})(),(0,F.jsx)(`ul`,{className:`icon_list_box`,children:t.map((e,t)=>(0,F.jsxs)(`li`,{onClick:()=>{s(t),l(e),d(!0)},className:o===t?`clickIcon`:``,children:[(0,F.jsxs)(`div`,{className:`icon_img_box`,children:[e.class===`shot`?(0,F.jsx)(`a`,{href:e.address,target:`_blank`,children:(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`})}):(0,F.jsx)(`img`,{src:m(e.src),alt:`아이콘이미지`}),e.class===`shot`?(0,F.jsx)(`div`,{className:`shotcutIcon`}):``]}),(0,F.jsx)(`div`,{className:`icon_text`,children:e.title})]},t))})]})},pv=J_,mv=()=>{let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{let e=setTimeout(()=>{t(!1)},2e3);return()=>clearTimeout(e)},[]),(0,F.jsxs)($_,{children:[(0,F.jsx)(ng,{children:e&&(0,F.jsx)(pv.div,{className:`fade_bg`,initial:{opacity:1},exit:{opacity:0},transition:{duration:.7}})}),(0,F.jsx)(fv,{})]})};function hv(){let[e,t]=(0,S.useState)(null);return(0,F.jsx)(Fi,{children:(0,F.jsxs)(Jt,{children:[(0,F.jsx)(Kt,{element:(0,F.jsx)(Li,{}),children:(0,F.jsx)(Kt,{path:`/`,element:(0,F.jsx)(ps,{})})}),(0,F.jsx)(Kt,{element:(0,F.jsx)(Bi,{bottomBar:e,setBottomBar:t}),children:(0,F.jsx)(Kt,{path:`/main`,element:(0,F.jsx)(mv,{setBottomBar:t})})})]})})}(0,Wn.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(S.StrictMode,{children:(0,F.jsx)(Mn,{basename:`/windowStyle_portfolio`,children:(0,F.jsx)(hv,{})})}));
