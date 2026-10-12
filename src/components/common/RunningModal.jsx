@@ -7,10 +7,12 @@ const RunningModal = ({ thisProgramData, setIsProgram }) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
   useEffect(() => {
-    setInterval(() => {
+    const timer = setTimeout(() => {
       navigate("/program");
     }, 2000);
-  });
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <RunningModalWarp>
       <div className="inner">

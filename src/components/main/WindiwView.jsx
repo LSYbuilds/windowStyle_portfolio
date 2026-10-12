@@ -7,8 +7,10 @@ import ResumeModal from "../common/ResumeModal";
 import Program from "../../page/main/Program";
 import RunningModal from "../common/RunningModal";
 import WarningModal from "../common/WarningModal";
+import { useNavigate } from "react-router-dom";
 
 const WindowView = ({ setThisProgramData }) => {
+  const navigate = useNavigate();
   // 아이콘데이터 가져오기
   const IconList = IconData.iconDataList;
   const [iconListData, setIconListData] = useState(IconList);
@@ -72,6 +74,7 @@ const WindowView = ({ setThisProgramData }) => {
             thisProgramData={thisProgramData}
             setIsProgram={setIsProgram}
           />
+          // navigate("/program")
         );
       case "0":
         return <WarningModal setIsProgram={setIsProgram} />;

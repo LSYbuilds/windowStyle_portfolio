@@ -9,7 +9,7 @@ const Main = ({ setThisProgramData }) => {
     const timer = setTimeout(() => {
       setFadeAnime(false);
     }, 2000);
-
+    console.log("메인이펙");
     return () => clearTimeout(timer);
   }, []);
   return (

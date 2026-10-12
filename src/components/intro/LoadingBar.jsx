@@ -13,9 +13,14 @@ const LoadingBar = () => {
   };
   const navigate = useNavigate();
   useEffect(() => {
-    setInterval(() => {
+    const timer = setTimeout(() => {
       navigate("/main");
     }, 1500);
+
+    return () => clearInterval(timer);
+    // setInterval(() => {
+    //   navigate("/main");
+    // }, 1500);  이 씨발
   });
   return (
     <LoadingBarWrap>
