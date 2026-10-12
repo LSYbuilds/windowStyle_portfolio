@@ -12,7 +12,8 @@
       "title": "인터넷",
       "src": "/icon/InternetExplorer.png",
       "func": "1",
-      "class": "internet"
+      "class": "shot",
+      "address": "https://www.google.com/?hl=ko"
     },
     {
       "id": "3",

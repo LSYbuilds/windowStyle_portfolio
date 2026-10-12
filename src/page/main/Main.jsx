@@ -2,7 +2,7 @@ import React, { use, useEffect, useState } from "react";
 import { MainWrap } from "../../style/main/main_styled";
 import WindowView from "../../components/main/WindiwView";
 import { AnimatePresence, motion } from "motion/react";
-const Main = () => {
+const Main = ({ setThisProgramData }) => {
   const [fadeAnime, setFadeAnime] = useState(true);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Main = () => {
           />
         )}
       </AnimatePresence>
-      <WindowView />
+      <WindowView setThisProgramData={setThisProgramData} />
     </MainWrap>
   );
 };

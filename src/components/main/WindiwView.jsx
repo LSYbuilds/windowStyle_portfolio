@@ -4,10 +4,11 @@ import IconData from "../../assets/data/IconData.json";
 import ToolsData from "../../assets/data/ToolsData.json";
 import FolderModal from "../common/FolderModal";
 import ResumeModal from "../common/ResumeModal";
-import ProgramModal from "../../page/main/Program";
+import Program from "../../page/main/Program";
+import RunningModal from "../common/RunningModal";
 import WarningModal from "../common/WarningModal";
 
-const WindowView = () => {
+const WindowView = ({ setThisProgramData }) => {
   // 아이콘데이터 가져오기
   const IconList = IconData.iconDataList;
   const [iconListData, setIconListData] = useState(IconList);
@@ -36,6 +37,7 @@ const WindowView = () => {
           clickData={clickData}
           setIsModal={setIsModal}
           setIsProgram={setIsProgram}
+          setThisProgramData={setThisProgramData}
         />
       );
     }
@@ -66,7 +68,7 @@ const WindowView = () => {
     switch (thisProgramData.func) {
       case "1":
         return (
-          <ProgramModal
+          <RunningModal
             thisProgramData={thisProgramData}
             setIsProgram={setIsProgram}
           />

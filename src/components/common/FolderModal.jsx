@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { FolderModalWrap } from "../../style/common/Modal_styled";
 import { motion, useDragControls } from "framer-motion";
 
-const FolderModal = ({ clickData, setIsModal, setIsProgram }) => {
+const FolderModal = ({
+  clickData,
+  setIsModal,
+  setIsProgram,
+  setThisProgramData,
+}) => {
   const defaultStyle = { width: "40%", height: "60%" };
   const fullStyle = {
     width: "100%",
@@ -100,7 +105,10 @@ const FolderModal = ({ clickData, setIsModal, setIsProgram }) => {
               {clickData.list.map((item, idx) => (
                 <li
                   key={item.id}
-                  onClick={() => setIsProgram({ state: true, index: item.id })}
+                  onClick={() => {
+                    (setIsProgram({ state: true, index: item.id }),
+                      setThisProgramData(item.title));
+                  }}
                 >
                   <div className="icon_img_box">
                     <img src={publicPath(item.src)} alt="" />

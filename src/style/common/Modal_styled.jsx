@@ -744,3 +744,64 @@ export const WarningModalWrap = styled(motion.div)`
 `;
 
 export const ProgramModalWrap = styled(motion.div)``;
+
+export const RunningModalWarp = styled.div`
+  position: fixed;
+  z-index: 950;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  .inner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 40%;
+    border-radius: 18px;
+    .icon_img_box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+      img {
+        height: 60%;
+      }
+    }
+    .loading_anime_box {
+      width: 100%;
+      height: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e6e6e6;
+      .loading_track {
+        display: flex;
+        width: max-content;
+        height: 100%;
+        animation: loadingMove 1.5s linear infinite;
+        img {
+          width: auto;
+          height: 100%;
+          flex-shrink: 0;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    @keyframes loadingMove {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(1000%);
+      }
+    }
+  }
+`;

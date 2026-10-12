@@ -5,10 +5,12 @@ import Introlayout from "./components/leyout/intro_layout";
 import Mainlayout from "./components/leyout/main_layout";
 import Intro from "./page/intro/intro";
 import Main from "./page/main/Main";
+import Program from "./page/main/Program";
 import "./App.css";
 
 function App() {
   const [bottomBar, setBottomBar] = useState(null);
+  const [thisProgramData, setThisProgramData] = useState(null);
   return (
     <Wrap>
       <Routes>
@@ -22,7 +24,21 @@ function App() {
         >
           <Route
             path="/main"
-            element={<Main setBottomBar={setBottomBar} />}
+            element={
+              <Main
+                setBottomBar={setBottomBar}
+                setThisProgramData={setThisProgramData}
+              />
+            }
+          ></Route>
+          <Route
+            path="/program"
+            element={
+              <Program
+                setThisProgramData={setThisProgramData}
+                thisProgramData={thisProgramData}
+              />
+            }
           ></Route>
         </Route>
       </Routes>

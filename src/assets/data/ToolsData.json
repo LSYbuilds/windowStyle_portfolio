@@ -5,37 +5,10 @@
       "title": "HTML5",
       "src": "/icon/html5.png",
       "func": "1",
-      "imgSlide": [
-        {
-          "id": "1",
-          "src": ""
-        },
-        {
-          "id": "2",
-          "src": ""
-        },
-        {
-          "id": "3",
-          "src": ""
-        }
-      ],
-      "category": [
-        {
-          "id": "1",
-          "title": "시멘틱 마크업"
-        },
-        {
-          "id": "2",
-          "title": "웹 표준"
-        },
-        {
-          "id": "3",
-          "title": "반응형"
-        }
-      ],
       "desc": [
         {
           "id": "1",
+          "img": "",
           "title": "Semantic Markup",
           "subtitle": "의미와 구조를 고려한 시맨틱 마크업",
           "text1": "HTML5의 시맨틱 요소를 활용하여 콘텐츠의 역할과 문서 구조를 명확하게 표현할 수 있습니다. 단순히 화면을 구현하는 것을 넘어, 개발자와 브라우저가 콘텐츠의 의미를 쉽게 이해할 수 있도록 구조적인 마크업을 작성할 수 있으며 .header, nav, main, section, article, footer 등의 요소를 콘텐츠의 목적에 맞게 구분하여 사용하며, 이를 통해 코드의 가독성과 유지보수성을 높입니다.",
@@ -44,6 +17,7 @@
         },
         {
           "id": "2",
+          "img": "",
           "title": "Web Standard & Accessibility",
           "subtitle": "웹 표준을 준수하고 다양한 사용 환경을 고려한 접근성 중심의 개발",
           "text1": "웹 표준은 특정 브라우저나 디바이스에 종속되지 않고 웹 콘텐츠가 일관된 방식으로 동작할 수 있습니다.",
@@ -52,6 +26,7 @@
         },
         {
           "id": "3",
+          "img": "",
           "title": "Responsive Structure",
           "subtitle": "다양한 디바이스를 고려한 유연한 HTML 구조",
           "text1": "데스크톱뿐만 아니라 태블릿과 모바일 환경에서도 콘텐츠가 자연스럽게 이어질 수 있도록 화면에 종속되지 않는 HTML 구조를 설계할 수 있습니다.",
@@ -65,37 +40,10 @@
       "title": "CSS",
       "src": "/icon/css.png",
       "func": "1",
-      "imgSlide": [
-        {
-          "id": "1",
-          "src": ""
-        },
-        {
-          "id": "2",
-          "src": ""
-        },
-        {
-          "id": "3",
-          "src": ""
-        }
-      ],
-      "category": [
-        {
-          "id": "1",
-          "title": "CSS기본"
-        },
-        {
-          "id": "2",
-          "title": "SASS"
-        },
-        {
-          "id": "3",
-          "title": "Styled Components"
-        }
-      ],
       "desc": [
         {
           "id": "1",
+          "img": "",
           "title": "Core Styling & Layout",
           "subtitle": "기본 스타일링과 레이아웃",
           "text1": "콘텐츠의 배치 목적에 따라 Flexbox와 CSS Grid를 구분하여 사용합니다.Flexbox는 네비게이션, 버튼 그룹, 카드 내부 정렬 등 1차원적인 요소 배치에 활용하고, Grid는 카드 목록이나 페이지의 전체적인 영역 구성처럼 2차원적인 레이아웃을 구성할 때 활용합니다.",
@@ -103,6 +51,7 @@
         },
         {
           "id": "2",
+          "img": "",
           "title": "Scalable & Maintainable Styling",
           "subtitle": "구조적으로 관리하고 재사용하기 위한 CSS 전처리기",
           "text1": "SASS(SCSS)는 CSS의 반복적인 스타일 선언을 줄이고, 프로젝트의 스타일을 구조적으로 관리하고 재사용하기 위한 CSS 전처리기입니다. 변수, Nesting, Mixin, Function 등의 기능을 활용하여 공통 스타일을 모듈화하고, 프로젝트 규모가 커져도 일관된 스타일 구조를 유지할 수 있도록 작성합니다.",
@@ -110,6 +59,7 @@
         },
         {
           "id": "3",
+          "img": "",
           "title": "Component-Based Styling & Dynamic UI",
           "subtitle": "React의 컴포넌트 구조와 스타일을 하나의 단위로 관리",
           "text1": "React의 컴포넌트 구조와 스타일을 하나의 단위로 관리하기 위해 Styled Components를 활용합니다. 컴포넌트별 스타일을 독립적으로 정의하여 전역 CSS에서 발생할 수 있는 스타일 충돌을 줄이고, UI의 구조와 스타일을 명확하게 분리합니다.",
