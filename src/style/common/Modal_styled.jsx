@@ -634,7 +634,7 @@ export const ResumeModalWrap = styled(motion.div)`
 
 export const WarningModalWrap = styled(motion.div)`
   position: fixed;
-  z-index: 950;
+  z-index: 999;
   top: 0px;
   left: 0px;
   width: 100%;

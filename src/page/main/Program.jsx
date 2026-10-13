@@ -1,38 +1,77 @@
-import React, { use, useEffect, useState } from "react";
+import React from "react";
+
 import HtmlProgram from "../../components/main/HtmlProgram";
+import CssProgram from "../../components/main/CssProgram";
+import FigmaProgram from "../../components/main/FigmaProgram";
+import PhotoProgram from "../../components/main/PhotoProgram";
+import WarningModal from "../../components/common/WarningModal";
+
 import ProgramData from "../../assets/data/ToolsData.json";
 import { ProgramWrap } from "../../style/common/Program_styled";
 
 const Program = ({ setThisProgramData, thisProgramData }) => {
-  console.log("이거뭐냐", thisProgramData);
+  // JSON 데이터
   const ProgramDateSet = ProgramData.toolsDataList;
-  const thisData = ProgramDateSet.find(
-    (item) => item.title === thisProgramData,
-  );
-  const [machProgramData, setMachProgramData] = useState(thisData);
-  console.log("매치데이터", machProgramData);
 
-  // thisProgramData 분기
+  // public 경로 처리
+  const publicPath = (path) => {
+    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+  };
+
+  // 선택한 프로그램 제목에 해당하는 데이터 즉시 검색
+  const machProgramData =
+    ProgramDateSet.find((item) => item.title === thisProgramData) ?? null;
+
+  console.log("선택한 프로그램:", thisProgramData);
+  console.log("매칭된 프로그램 데이터:", machProgramData);
+
+  // 선택한 프로그램에 따라 컴포넌트 렌더링
   const renderProgramView = () => {
     if (!thisProgramData) return null;
+
     switch (thisProgramData) {
       case "HTML5":
         return <HtmlProgram machProgramData={machProgramData} />;
+
       case "CSS":
-        return <></>;
+        return <CssProgram machProgramData={machProgramData} />;
+
       case "Adobe Photoshop":
-        return <></>;
+        return <PhotoProgram machProgramData={machProgramData} />;
+
       case "Figma":
-        return <></>;
+        return <FigmaProgram machProgramData={machProgramData} />;
+
       case "GitHub":
-        return <></>;
+        return <FigmaProgram machProgramData={machProgramData} />;
+
+      case "REACT":
+        return <WarningModal />;
+
       default:
         return null;
     }
   };
+
   return (
     <ProgramWrap>
-      <div className="inner">{renderProgramView()}</div>
+      <div className="inner">
+        <div className="program_category">
+          <ul className="program_list">
+            {ProgramDateSet.map((item) => (
+              <li key={item.id} onClick={() => setThisProgramData(item.title)}>
+                <div className="program_icon_img">
+                  <img src={publicPath(item.src)} alt="" />
+                </div>
+
+                <div className="icon_text">{item.title}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {renderProgramView()}
+      </div>
     </ProgramWrap>
   );
 };

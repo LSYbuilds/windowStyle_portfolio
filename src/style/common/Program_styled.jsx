@@ -1,14 +1,59 @@
 import styled from "@emotion/styled";
 
 export const ProgramWrap = styled.div`
+  font-family: "Pretendard", sans-serif;
   width: 100%;
   height: 100%;
   background-color: #0b1018;
   .inner {
     margin: 0 auto;
     max-width: 1400px;
+    padding-top: 32px;
     padding-bottom: 200px;
     width: 100%;
+    .program_category {
+      margin-bottom: 32px;
+      width: 100%;
+      height: 100px;
+      .program_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        height: 100%;
+        li {
+          display: flex;
+          flex-direction: column;
+          width: 100px;
+          height: 125px;
+          border-radius: 16px;
+          background-color: #c4c4c4;
+          border: 3px solid #2d4058;
+          cursor: pointer;
+          .program_icon_img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 60%;
+            img {
+              height: 75%;
+            }
+          }
+          .icon_text {
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            color: #000000;
+            font-weight: 400;
+          }
+          &:hover {
+            background-color: #b6b6b6;
+          }
+        }
+      }
+    }
   }
 `;
 
