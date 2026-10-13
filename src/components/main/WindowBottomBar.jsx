@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { removeBottomBar } from "../../redux/bottomBarSlice";
 import { WindowBottomWrap } from "../../style/main/windowBottom_styled";
 
 const WindowBottomBar = ({ bottomBar, setBottomBar }) => {
@@ -6,6 +8,8 @@ const WindowBottomBar = ({ bottomBar, setBottomBar }) => {
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
+  // 리덕스 저장데이터 가져와!
+  console.log("바텀 바", bottomBar);
   return (
     <WindowBottomWrap>
       <div className="inner">

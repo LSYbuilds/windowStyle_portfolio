@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addBottomBar } from "../../redux/bottomBarSlice";
 import { FolderModalWrap } from "../../style/common/Modal_styled";
 import { motion, useDragControls } from "framer-motion";
 
@@ -16,6 +18,7 @@ const FolderModal = ({
     top: "0px",
     left: "0px",
   };
+  const dispatch = useDispatch();
   const [full, setFull] = useState(false);
   const dragControls = useDragControls();
   const [modalStyle, setModalStyle] = useState(defaultStyle);
@@ -45,7 +48,18 @@ const FolderModal = ({
             <div className="folder_name">{clickData.title}</div>
           </div>
           <div className="folder_button">
-            <button className="minimal"></button>
+            <button
+              className="minimal"
+              onClick={() => {
+                dispatch(
+                  addBottomBar({
+                    id: clickData.id,
+                    title: clickData.title,
+                    src: clickData.src,
+                  }),
+                );
+              }}
+            ></button>
             {full ? (
               <button
                 className="restore"

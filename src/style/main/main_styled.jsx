@@ -39,6 +39,8 @@ export const WindowViewWrap = styled.div`
       flex-direction: column;
       gap: 4px;
       width: 80px;
+      user-select: none;
+      -webkit-user-select: none;
       .icon_img_box {
         position: relative;
         display: flex;

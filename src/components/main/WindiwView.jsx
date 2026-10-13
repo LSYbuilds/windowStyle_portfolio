@@ -23,6 +23,9 @@ const WindowView = ({ setThisProgramData }) => {
   const [isModal, setIsModal] = useState(false);
   // 모달(프로그램실행) 스테이트
   const [isProgram, setIsProgram] = useState(null);
+  // 한번클릭 css 스테이트
+  const [oneClickCss, setOneClickCss] = useState(false);
+
   console.log("클릭데이터", clickData);
   // 정규식
   const publicPath = (path) => {
@@ -93,8 +96,9 @@ const WindowView = ({ setThisProgramData }) => {
         {iconListData.map((item, idx) => (
           <li
             key={idx}
+            onClick={() => setIconClickIndex(idx)}
             onDoubleClick={() => {
-              (setIconClickIndex(idx), setClickData(item), setIsModal(true));
+              (setClickData(item), setIsModal(true));
             }}
             className={iconClickIndex === idx ? "clickIcon" : ""}
           >
