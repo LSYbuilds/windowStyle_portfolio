@@ -75,32 +75,91 @@
       "title": "Adobe Photoshop",
       "src": "/icon/Adobe_Photoshop.png",
       "func": "1",
-      "imgThumbnail": [
-        {
-          "id": "1",
-          "src": ""
-        },
-        {
-          "id": "2",
-          "src": ""
-        },
-        {
-          "id": "3",
-          "src": ""
-        }
-      ],
       "imgDetail": [
         {
           "id": "1",
-          "src": ""
+          "src": "/img/photoimg1.jpg",
+          "title": "스타일가이드"
         },
         {
           "id": "2",
-          "src": ""
+          "src": "/img/photoimg2.jpg",
+          "title": "마우스 상세페이지1"
         },
         {
           "id": "3",
-          "src": ""
+          "src": "/img/photoimg3.jpg",
+          "title": "이월드 리디자인"
+        },
+        {
+          "id": "4",
+          "src": "/img/photoimg4.jpg",
+          "title": "상세페이지2"
+        },
+        {
+          "id": "5",
+          "src": "/img/photoimg5.png",
+          "title": "도트로고"
+        },
+        {
+          "id": "6",
+          "src": "/img/photoimg6.jpg",
+          "title": "LSY로고"
+        },
+        {
+          "id": "7",
+          "src": "/img/photoimg7.png",
+          "title": "레드모쿠스 이미지"
+        },
+        {
+          "id": "8",
+          "src": "/img/photoimg8.png",
+          "title": "싹싹"
+        },
+        {
+          "id": "9",
+          "src": "/img/photoimg9.png",
+          "title": "리액트아이콘"
+        },
+        {
+          "id": "10",
+          "src": "/img/photoimg10.png",
+          "title": "포토샵아이콘"
+        },
+        {
+          "id": "11",
+          "src": "/img/photoimg11.png",
+          "title": "CSS아이콘"
+        },
+        {
+          "id": "12",
+          "src": "/img/photoimg12.png",
+          "title": "피그마아이콘"
+        },
+        {
+          "id": "13",
+          "src": "/img/photoimg13.png",
+          "title": "깃허브아이콘"
+        },
+        {
+          "id": "14",
+          "src": "/img/photoimg14.png",
+          "title": "HTML아이콘"
+        },
+        {
+          "id": "15",
+          "src": "/img/photoimg15.png",
+          "title": "자바스크립트아이콘"
+        },
+        {
+          "id": "16",
+          "src": "/img/photoimg16.png",
+          "title": "부오스크W"
+        },
+        {
+          "id": "17",
+          "src": "/img/photoimg17.png",
+          "title": "부오스크B"
         }
       ]
     },

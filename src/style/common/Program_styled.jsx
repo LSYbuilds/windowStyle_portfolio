@@ -184,3 +184,100 @@ export const HtmlProgramWrap = styled.div`
   @media (max-width: 640px) {
   }
 `;
+
+export const PhotoProgramWrap = styled.div`
+  font-family: "Pretendard", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  .max_size_wrap {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    .max_size_inner {
+      max-width: 1400px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 24px 32px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+
+    .icon_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 180px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: aliceblue;
+      overflow: hidden;
+
+      img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+    }
+
+    .icon_title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.3;
+      word-break: keep-all;
+    }
+  }
+  .work_list_box {
+    width: 100%;
+    .photoshop_list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-row-gap: 2.5%;
+      grid-column-gap: 2.5%;
+      justify-content: flex-start;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: 300px;
+        cursor: pointer;
+        .work_img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          height: 80%;
+          background-color: #2c2c2c;
+          padding: 24px;
+          overflow: hidden;
+          border-radius: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          &:hover {
+            background-color: #525252;
+          }
+        }
+        .img_name {
+          font-size: 1.125em;
+          color: #fff;
+        }
+      }
+    }
+  }
+`;
