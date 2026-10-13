@@ -93,7 +93,7 @@ const WindowView = ({ setThisProgramData }) => {
         {iconListData.map((item, idx) => (
           <li
             key={idx}
-            onClick={() => {
+            onDoubleClick={() => {
               (setIconClickIndex(idx), setClickData(item), setIsModal(true));
             }}
             className={iconClickIndex === idx ? "clickIcon" : ""}

@@ -2,9 +2,9 @@ import React from "react";
 
 import HtmlProgram from "../../components/main/HtmlProgram";
 import CssProgram from "../../components/main/CssProgram";
-import FigmaProgram from "../../components/main/FigmaProgram";
 import PhotoProgram from "../../components/main/PhotoProgram";
 import WarningModal from "../../components/common/WarningModal";
+import FigmaProgram from "../../components/main/FigmaProgram";
 
 import ProgramData from "../../assets/data/ToolsData.json";
 import { ProgramWrap } from "../../style/common/Program_styled";
@@ -43,7 +43,7 @@ const Program = ({ setThisProgramData, thisProgramData }) => {
         return <FigmaProgram machProgramData={machProgramData} />;
 
       case "GitHub":
-        return <FigmaProgram machProgramData={machProgramData} />;
+        return <></>;
 
       case "REACT":
         return <WarningModal />;

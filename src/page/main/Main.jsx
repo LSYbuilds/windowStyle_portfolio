@@ -8,7 +8,7 @@ const Main = ({ setThisProgramData }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeAnime(false);
-    }, 2000);
+    }, 100);
     console.log("메인이펙");
     return () => clearTimeout(timer);
   }, []);
@@ -20,7 +20,7 @@ const Main = ({ setThisProgramData }) => {
             className="fade_bg"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.5 }}
           />
         )}
       </AnimatePresence>

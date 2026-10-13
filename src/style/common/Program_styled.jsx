@@ -193,14 +193,146 @@ export const PhotoProgramWrap = styled.div`
   box-sizing: border-box;
   .max_size_wrap {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
     .max_size_inner {
-      max-width: 1400px;
+      display: flex;
+      flex-direction: column;
       width: 100%;
+      max-width: 1400px;
       height: 100%;
+      max-height: 800px;
+      box-sizing: border-box;
+      background-color: #525252;
+      border-radius: 8px;
+      overflow: hidden;
+      .max_size_info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        min-height: 68px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+
+        background-color: #303030;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+        .img_info {
+          min-width: 0;
+          color: #f5f5f5;
+          font-size: 1.05rem;
+          font-weight: 600;
+          line-height: 1.5;
+          letter-spacing: -0.02em;
+
+          // 긴 제목이 영역을 벗어나지 않도록 처리
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .close_btn {
+          display: flex;
+          flex-shrink: 0;
+          justify-content: center;
+          align-items: center;
+
+          width: 42px;
+          height: 42px;
+          padding: 0;
+
+          color: #e5e5e5;
+          background-color: #414141;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 8px;
+
+          cursor: pointer;
+          transition:
+            background-color 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
+
+          // X 아이콘
+          &::before,
+          &::after {
+            position: absolute;
+            width: 17px;
+            height: 2px;
+            content: "";
+            background-color: currentColor;
+            border-radius: 2px;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+
+          &:hover {
+            color: #fff;
+            background-color: #dc4545;
+            border-color: #dc4545;
+          }
+
+          &:active {
+            transform: scale(0.94);
+          }
+
+          &:focus-visible {
+            outline: 2px solid #a5b4fc;
+            outline-offset: 3px;
+          }
+        }
+      }
+      .max_side_img_box {
+        position: relative;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 0;
+        padding: 16px;
+        box-sizing: border-box;
+
+        .img_box {
+          width: 100%;
+          height: 100%;
+          min-height: 0;
+          overflow-y: auto; // 이미지가 영역보다 크면 스크롤
+          overflow-x: hidden;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto; // 원본 비율 유지
+          }
+        }
+
+        .text_box {
+          position: absolute;
+          top: 80%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 16px;
+          background-color: #fff;
+        }
+      }
     }
   }
   .hero {
@@ -278,6 +410,51 @@ export const PhotoProgramWrap = styled.div`
           color: #fff;
         }
       }
+    }
+  }
+`;
+
+export const FigmaProgramWrap = styled.div`
+  font-family: "Pretendard", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 24px 32px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+
+    .icon_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 180px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: aliceblue;
+      overflow: hidden;
+
+      img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+    }
+
+    .icon_title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.3;
+      word-break: keep-all;
     }
   }
 `;
