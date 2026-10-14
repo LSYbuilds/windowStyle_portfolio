@@ -30,31 +30,38 @@ const Main = ({ setThisProgramData, setIsModal, isModal }) => {
   // 아이콘 클릭 데이터 불러오기
   const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
 
-  // 폴더 및 파일 모달창 코드
   const renderModal = () => {
     if (!isModal) return null;
-    if (clickData.class === "folder") {
-      // return (
-      //   <FolderModal
-      //     clickData={clickData}
-      //     setIsModal={setIsModal}
-      //     setIsProgram={setIsProgram}
-      //     setThisProgramData={setThisProgramData}
-      //   />
-      // );
+    if (clickIconIdx.class === "folder") {
+      return alert("테스트테스트");
     }
-    if (clickData.class === "file") {
-      switch (clickData.detail) {
-        case "word":
-          return <ResumeModal setIsModal={setIsModal} />;
-        case "picture":
-          return null;
-        default:
-          return null;
-      }
-    }
-    return null;
   };
+
+  // 폴더 및 파일 모달창 코드
+  // const renderModal = () => {
+  //   if (!isModal) return null;
+  //   if (clickData.class === "folder") {
+  //     // return (
+  //     //   <FolderModal
+  //     //     clickData={clickData}
+  //     //     setIsModal={setIsModal}
+  //     //     setIsProgram={setIsProgram}
+  //     //     setThisProgramData={setThisProgramData}
+  //     //   />
+  //     // );
+  //   }
+  //   if (clickData.class === "file") {
+  //     switch (clickData.detail) {
+  //       case "word":
+  //         return <ResumeModal setIsModal={setIsModal} />;
+  //       case "picture":
+  //         return null;
+  //       default:
+  //         return null;
+  //     }
+  //   }
+  //   return null;
+  // };
 
   // 프로그램 실행창 모달코드
   const renderProgramModal = () => {
@@ -100,7 +107,7 @@ const Main = ({ setThisProgramData, setIsModal, isModal }) => {
           />
         )}
       </AnimatePresence>
-      {renderModal()}
+      {/* {renderModal()} */}
       {renderProgramModal()}
       <WindowView
         setThisProgramData={setThisProgramData}

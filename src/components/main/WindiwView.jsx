@@ -21,6 +21,7 @@ const WindowView = ({ setThisProgramData, setIsModal }) => {
   // 아이콘 클릭 데이터 불러오기
   const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
 
+  console.log("클릭데이터", clickIconIdx);
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
