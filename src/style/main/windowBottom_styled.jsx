@@ -28,6 +28,7 @@ export const WindowBottomWrap = styled.div`
     .quick_menu_box {
       display: flex;
       justify-content: flex-start;
+      gap: 8px;
       .quick_menu {
         display: flex;
         justify-content: flex-start;
@@ -66,6 +67,48 @@ export const WindowBottomWrap = styled.div`
             #4db84b 89%,
             rgba(24, 91, 58, 1) 100%
           );
+        }
+      }
+      .bottom_list {
+        width: 800px;
+        height: 100%;
+        position: relative;
+        display: flex;
+        gap: 8px;
+        li {
+          position: relative;
+          display: flex;
+          flex: 1 1 10%;
+          max-width: 30%;
+          cursor: pointer;
+          background-color: #3c81f3;
+          &:hover {
+            background-color: #5992ee;
+          }
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            width: 99%;
+            height: 80%;
+            border: 2px solid #4e8cee;
+            filter: blur(1px);
+          }
+          .icon_box {
+            width: 40px;
+            height: 40px;
+            padding: 3%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .icon_text {
+            align-content: center;
+            color: #fff;
+          }
         }
       }
     }

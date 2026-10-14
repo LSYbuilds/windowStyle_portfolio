@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addBottomBar } from "../../redux/bottomBarSlice";
+import { addBottomBar, removeBottomBar } from "../../redux/bottomBarSlice";
+import {
+  addBottomThis,
+  removeBottomThis,
+} from "../../redux/bottomBarClickSlice";
 import { FolderModalWrap } from "../../style/common/Modal_styled";
 import { motion, useDragControls } from "framer-motion";
 
@@ -25,6 +29,7 @@ const FolderModal = ({
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
+  console.log("클릭데이터", clickData);
   return (
     <FolderModalWrap
       drag
@@ -51,13 +56,18 @@ const FolderModal = ({
             <button
               className="minimal"
               onClick={() => {
+                console.log("클릭데이터", clickData);
+                setIsModal(false);
                 dispatch(
                   addBottomBar({
                     id: clickData.id,
                     title: clickData.title,
                     src: clickData.src,
+                    func: clickData.func,
+                    class: clickData.class,
                   }),
                 );
+                dispatch(removeBottomThis(clickData.title));
               }}
             ></button>
             {full ? (
@@ -77,7 +87,12 @@ const FolderModal = ({
             )}
             <button
               className="close"
-              onClick={() => setIsModal(false)}
+              onClick={() => {
+                setIsModal(false);
+
+                dispatch(removeBottomBar(clickData.title));
+                dispatch(removeBottomThis(clickData.title));
+              }}
             ></button>
           </div>
         </div>

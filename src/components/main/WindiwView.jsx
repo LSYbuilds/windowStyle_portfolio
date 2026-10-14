@@ -1,104 +1,42 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addIconClickData } from "../../redux/iconClickSlice";
 import { WindowViewWrap } from "../../style/main/main_styled";
 import IconData from "../../assets/data/IconData.json";
 import ToolsData from "../../assets/data/ToolsData.json";
-import FolderModal from "../common/FolderModal";
-import ResumeModal from "../common/ResumeModal";
-import Program from "../../page/main/Program";
-import RunningModal from "../common/RunningModal";
-import WarningModal from "../common/WarningModal";
 import { useNavigate } from "react-router-dom";
 
-const WindowView = ({ setThisProgramData }) => {
+const WindowView = ({ setThisProgramData, setIsModal }) => {
+  // 리덕스툴킷
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  // 아이콘데이터 가져오기
+  // 아이콘데이터 가져오기(유지)
   const IconList = IconData.iconDataList;
   const [iconListData, setIconListData] = useState(IconList);
   const programData = ToolsData.toolsDataList;
-  // 프로그램데이터 가져오기
-  const [programDataList, setProgramDataList] = useState(programData);
+  // 아이콘클릭 CSS 변경 state(유지)
   const [iconClickIndex, setIconClickIndex] = useState(null);
-  const [clickData, setClickData] = useState(null);
-  // 모달스테이트
-  const [isModal, setIsModal] = useState(false);
-  // 모달(프로그램실행) 스테이트
-  const [isProgram, setIsProgram] = useState(null);
   // 한번클릭 css 스테이트
   const [oneClickCss, setOneClickCss] = useState(false);
+  // 아이콘 클릭 데이터 불러오기
+  const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
 
-  console.log("클릭데이터", clickData);
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
-  // <FolderModal clickData={clickData} setIsModal={setIsModal} />
-
-  // 폴더 및 파일 모달창 코드
-  const renderModal = () => {
-    if (!isModal || !clickData) return null;
-    if (clickData.class === "folder") {
-      return (
-        <FolderModal
-          clickData={clickData}
-          setIsModal={setIsModal}
-          setIsProgram={setIsProgram}
-          setThisProgramData={setThisProgramData}
-        />
-      );
-    }
-    if (clickData.class === "file") {
-      switch (clickData.detail) {
-        case "word":
-          return <ResumeModal setIsModal={setIsModal} />;
-        case "picture":
-          return null;
-        default:
-          return null;
-      }
-    }
-    return null;
-  };
-
-  //   const thisProgramData = programDataList.find(
-  //   (item) => item.id === isProgram.index,
-  // );
-  // console.log("해당 데이터", thisProgramData);
-  // 프로그램 실행창 모달코드
-  const renderProgramModal = () => {
-    if (!isProgram) return null;
-    const thisProgramData = programDataList.find(
-      (item) => item.id === isProgram.index,
-    );
-    if (!thisProgramData) return null;
-    switch (thisProgramData.func) {
-      case "1":
-        return (
-          <RunningModal
-            thisProgramData={thisProgramData}
-            setIsProgram={setIsProgram}
-          />
-          // navigate("/program")
-        );
-      case "0":
-        return <WarningModal setIsProgram={setIsProgram} />;
-      default:
-        return null;
-    }
-  };
-  console.log("이즈프로그램", isProgram);
-  console.log("프로그램데이터", programDataList);
 
   return (
     <WindowViewWrap>
-      {renderModal()}
-      {renderProgramModal()}
       <ul className="icon_list_box">
         {iconListData.map((item, idx) => (
           <li
             key={idx}
-            onClick={() => setIconClickIndex(idx)}
+            onClick={() => {
+              setIconClickIndex(idx);
+            }}
             onDoubleClick={() => {
-              (setClickData(item), setIsModal(true));
+              (dispatch(addIconClickData(item)), setIsModal(true));
             }}
             className={iconClickIndex === idx ? "clickIcon" : ""}
           >

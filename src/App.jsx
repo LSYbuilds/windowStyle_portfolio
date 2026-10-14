@@ -9,25 +9,23 @@ import Program from "./page/main/Program";
 import "./App.css";
 
 function App() {
-  const [bottomBar, setBottomBar] = useState(null);
   const [thisProgramData, setThisProgramData] = useState(null);
+  // 모달스테이트
+  const [isModal, setIsModal] = useState(false);
   return (
     <Wrap>
       <Routes>
         <Route element={<Introlayout />}>
           <Route path="/" element={<Intro />}></Route>
         </Route>
-        <Route
-          element={
-            <Mainlayout bottomBar={bottomBar} setBottomBar={setBottomBar} />
-          }
-        >
+        <Route element={<Mainlayout setIsModal={setIsModal} />}>
           <Route
             path="/main"
             element={
               <Main
-                setBottomBar={setBottomBar}
                 setThisProgramData={setThisProgramData}
+                setIsModal={setIsModal}
+                isModal={isModal}
               />
             }
           ></Route>
