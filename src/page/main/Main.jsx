@@ -11,6 +11,7 @@ import RunningModal from "../../components/common/RunningModal";
 import WarningModal from "../../components/common/WarningModal";
 import Program from "../../page/main/Program";
 import { MainWrap } from "../../style/main/main_styled";
+import { retry } from "@reduxjs/toolkit/query";
 const Main = ({ setThisProgramData }) => {
   const [fadeAnime, setFadeAnime] = useState(true);
   // 아이콘데이터 가져오기(유지)
@@ -32,8 +33,22 @@ const Main = ({ setThisProgramData }) => {
 
   const renderModal = () => {
     if (!clickIconIdx) return null;
-    if (clickIconIdx || clickIconIdx.class === "folder") {
-      return <FolderModal setIsProgram={setIsProgram} />;
+    if (clickIconIdx) {
+      switch (clickIconIdx.class) {
+        case "folder":
+          return <FolderModal />;
+        case "file":
+          switch (clickIconIdx.detail) {
+            case "picture":
+              return null;
+            case "word":
+              return <ResumeModal />;
+            default:
+              return null;
+          }
+        default:
+          return null;
+      }
     }
   };
 
