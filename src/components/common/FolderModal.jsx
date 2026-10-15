@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addBottomBar, removeBottomBar } from "../../redux/bottomBarSlice";
 import {
   addBottomThis,
   removeBottomThis,
 } from "../../redux/bottomBarClickSlice";
+import { removeIconClickData } from "../../redux/iconClickSlice";
 import { FolderModalWrap } from "../../style/common/Modal_styled";
 import { motion, useDragControls } from "framer-motion";
 
-const FolderModal = ({
-  clickData,
-  setIsModal,
-  setIsProgram,
-  setThisProgramData,
-}) => {
+const FolderModal = ({ setIsProgram, setThisProgramData }) => {
   const defaultStyle = { width: "40%", height: "60%" };
   const fullStyle = {
     width: "100%",
@@ -22,14 +18,17 @@ const FolderModal = ({
     top: "0px",
     left: "0px",
   };
+  // 리덕스
   const dispatch = useDispatch();
+  // 아이콘 클릭 데이터 불러오기
+  const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
+  // 리덕스
   const [full, setFull] = useState(false);
   const dragControls = useDragControls();
   const [modalStyle, setModalStyle] = useState(defaultStyle);
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
-  console.log("클릭데이터", clickData);
   return (
     <FolderModalWrap
       drag
@@ -47,27 +46,18 @@ const FolderModal = ({
         <div className="top_bar">
           <div className="icon_name">
             <div className="icon_img">
-              <img src={publicPath(clickData.src)} alt="" />
+              <img src={publicPath(clickIconIdx.src)} alt="" />
               {/* <img src={publicPath(clickData.src)} alt="폴더이미지" /> */}
             </div>
-            <div className="folder_name">{clickData.title}</div>
+            <div className="folder_name">{clickIconIdx.title}</div>
           </div>
           <div className="folder_button">
             <button
               className="minimal"
               onClick={() => {
-                console.log("클릭데이터", clickData);
-                setIsModal(false);
-                dispatch(
-                  addBottomBar({
-                    id: clickData.id,
-                    title: clickData.title,
-                    src: clickData.src,
-                    func: clickData.func,
-                    class: clickData.class,
-                  }),
-                );
-                dispatch(removeBottomThis(clickData.title));
+                dispatch(removeIconClickData());
+                dispatch(addBottomBar(clickIconIdx));
+                dispatch(removeBottomThis(clickIconIdx.title));
               }}
             ></button>
             {full ? (
@@ -88,10 +78,9 @@ const FolderModal = ({
             <button
               className="close"
               onClick={() => {
-                setIsModal(false);
-
-                dispatch(removeBottomBar(clickData.title));
-                dispatch(removeBottomThis(clickData.title));
+                dispatch(removeIconClickData());
+                dispatch(removeBottomBar(clickIconIdx.title));
+                dispatch(removeBottomThis(clickIconIdx.title));
               }}
             ></button>
           </div>
@@ -129,9 +118,9 @@ const FolderModal = ({
       </div>
       <div className="inner">
         <ul className="item_list">
-          {clickData.list ? (
+          {clickIconIdx.list ? (
             <>
-              {clickData.list.map((item, idx) => (
+              {clickIconIdx.list.map((item) => (
                 <li
                   key={item.id}
                   onClick={() => {

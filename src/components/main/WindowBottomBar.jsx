@@ -9,7 +9,7 @@ import IconData from "../../assets/data/IconData.json";
 import { removeBottomBar } from "../../redux/bottomBarSlice";
 import { WindowBottomWrap } from "../../style/main/windowBottom_styled";
 
-const WindowBottomBar = ({ setIsModal }) => {
+const WindowBottomBar = () => {
   // 리덕스툴킷
   const dispatch = useDispatch();
   // 정규식
@@ -30,13 +30,6 @@ const WindowBottomBar = ({ setIsModal }) => {
   console.log("클릭 바텀 바 데이터", bottomBarThisIds);
   console.log("클릭데이터", clickIconIdx);
 
-  const handleClick = () => {
-    const data = IconList.find((item) => {
-      return item.title === bottomBarThisIds.title;
-    });
-    console.log("일단이게뭐지", data);
-    dispatch(addIconClickData(data));
-  };
   return (
     <WindowBottomWrap>
       <div className="inner">
@@ -52,17 +45,7 @@ const WindowBottomBar = ({ setIsModal }) => {
               <li
                 key={idx}
                 onClick={() => {
-                  handleClick();
-                  dispatch(
-                    addBottomThis({
-                      id: item.id,
-                      title: item.title,
-                      src: item.src,
-                      func: item.func,
-                      class: item.class,
-                    }),
-                  );
-                  setIsModal(true);
+                  dispatch(addIconClickData(item));
                 }}
               >
                 <div className="icon_box">

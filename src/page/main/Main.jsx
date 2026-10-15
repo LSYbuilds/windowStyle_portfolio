@@ -11,7 +11,7 @@ import RunningModal from "../../components/common/RunningModal";
 import WarningModal from "../../components/common/WarningModal";
 import Program from "../../page/main/Program";
 import { MainWrap } from "../../style/main/main_styled";
-const Main = ({ setThisProgramData, setIsModal, isModal }) => {
+const Main = ({ setThisProgramData }) => {
   const [fadeAnime, setFadeAnime] = useState(true);
   // 아이콘데이터 가져오기(유지)
   const IconList = IconData.iconDataList;
@@ -31,9 +31,9 @@ const Main = ({ setThisProgramData, setIsModal, isModal }) => {
   const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
 
   const renderModal = () => {
-    if (!isModal) return null;
-    if (clickIconIdx.class === "folder") {
-      return alert("테스트테스트");
+    if (!clickIconIdx) return null;
+    if (clickIconIdx || clickIconIdx.class === "folder") {
+      return <FolderModal setIsProgram={setIsProgram} />;
     }
   };
 
@@ -107,12 +107,9 @@ const Main = ({ setThisProgramData, setIsModal, isModal }) => {
           />
         )}
       </AnimatePresence>
-      {/* {renderModal()} */}
+      {renderModal()}
       {renderProgramModal()}
-      <WindowView
-        setThisProgramData={setThisProgramData}
-        setIsModal={setIsModal}
-      />
+      <WindowView setThisProgramData={setThisProgramData} />
     </MainWrap>
   );
 };

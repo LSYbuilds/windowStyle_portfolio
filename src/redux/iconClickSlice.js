@@ -3,23 +3,17 @@ import { createSlice } from "@reduxjs/toolkit";
 const IconClickSlice = createSlice({
   name: "windowIconClickData",
   initialState: {
-    openIconClickIdx: [],
+    openIconClickIdx: null,
   },
   reducers: {
+    // 클릭한 아이콘 데이터 저장
     addIconClickData: (state, action) => {
-      const clickIcon = action.payload;
-      const exists = state.openIconClickIdx.some(
-        (item) => item.title === clickIcon,
-      );
-
-      if (!exists) {
-        state.openIconClickIdx.push(clickIcon);
-      }
+      state.openIconClickIdx = action.payload;
     },
-    removeIconClickData: (state, action) => {
-      state.openIconClickIdx = state.openIconClickIdx.filter(
-        (itme) => item.title !== action.payload,
-      );
+
+    // 클릭한 아이콘 데이터 제거
+    removeIconClickData: (state) => {
+      state.openIconClickIdx = null;
     },
   },
 });

@@ -9,27 +9,16 @@ import Program from "./page/main/Program";
 import "./App.css";
 
 function App() {
-  const [thisProgramData, setThisProgramData] = useState(null);
-  // 모달스테이트
-  const [isModal, setIsModal] = useState(false);
+  // const [thisProgramData, setThisProgramData] = useState(null);
   return (
     <Wrap>
       <Routes>
         <Route element={<Introlayout />}>
           <Route path="/" element={<Intro />}></Route>
         </Route>
-        <Route element={<Mainlayout setIsModal={setIsModal} />}>
-          <Route
-            path="/main"
-            element={
-              <Main
-                setThisProgramData={setThisProgramData}
-                setIsModal={setIsModal}
-                isModal={isModal}
-              />
-            }
-          ></Route>
-          <Route
+        <Route element={<Mainlayout />}>
+          <Route path="/main" element={<Main />}></Route>
+          {/* <Route
             path="/program"
             element={
               <Program
@@ -37,7 +26,7 @@ function App() {
                 thisProgramData={thisProgramData}
               />
             }
-          ></Route>
+          ></Route> */}
         </Route>
       </Routes>
     </Wrap>
