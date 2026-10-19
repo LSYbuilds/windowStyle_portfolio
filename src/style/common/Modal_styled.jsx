@@ -8,185 +8,268 @@ const publicPath = (path) => {
 export const FolderModalWrap = styled(motion.div)`
   position: fixed;
   z-index: 800;
-  top: 0px;
-  left: 0px;
-  width: 40%;
-  height: 60%;
+  top: 10%;
+  left: 10%;
+  width: 600px;
+  height: 400px;
+  min-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #184bc1;
+  box-sizing: border-box;
+
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.2),
     0 8px 24px rgba(0, 0, 0, 0.12);
+
   .folder_bar {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     width: 100%;
     background-color: #f3f1e8;
     border-bottom: 1px solid #93adc4;
     cursor: default;
+    user-select: none;
+
     .top_bar {
+      position: relative;
       display: flex;
       justify-content: space-between;
       width: 100%;
       height: 35px;
+      flex-shrink: 0;
       background-color: #2259d7;
       box-sizing: border-box;
+
       &::before {
         position: absolute;
         top: 5px;
-        left: 0px;
+        left: 0;
         content: "";
         width: 100%;
         height: 3px;
         background-color: rgb(255, 255, 255, 0.3);
         filter: blur(3px);
+        pointer-events: none;
       }
+
       .icon_name {
         display: flex;
         align-items: center;
         height: 100%;
+        min-width: 0;
+
         .icon_img {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 30px;
           height: 100%;
+          flex-shrink: 0;
+
           img {
             width: 70%;
             aspect-ratio: 1;
             height: fit-content;
+            object-fit: contain;
           }
         }
+
         .folder_name {
           color: #fff;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
       }
+
       .folder_button {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         padding: 5px;
         height: 100%;
         gap: 4px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
         button {
           width: 25px;
           height: 100%;
+          padding: 0;
           border: none;
-          background-color: none;
+          background-color: transparent;
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
+          cursor: pointer;
+
           &:hover {
             opacity: 0.8;
           }
         }
+
         .minimal {
           background-image: url(${publicPath("/icon/Minimize.png")});
         }
+
         .full {
           background-image: url(${publicPath("/icon/Maximize.png")});
         }
+
         .close {
           background-image: url(${publicPath("/icon/Exit.png")});
         }
+
         .restore {
           background-image: url(${publicPath("/icon/Restore.png")});
         }
       }
     }
   }
+
   .folder_funtion_bar {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
+
     .file_func_top {
       display: flex;
       align-items: center;
       width: 100%;
       height: 30px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
       font-size: 0.875em;
       gap: 8px;
       border-bottom: 1px solid #dfdbc9;
+      box-sizing: border-box;
+
       li {
-        align-content: center;
+        display: flex;
+        align-items: center;
         height: 100%;
-        padding: 0px 4px;
+        padding: 0 4px;
+        white-space: nowrap;
+
         &:hover {
           background-color: #2259d7;
           color: #fff;
         }
       }
     }
+
     .file_func_bottom {
       display: flex;
+      align-items: center;
       height: 50px;
-      padding: 4px 0px;
+      margin: 0;
+      padding: 4px 0;
+      list-style: none;
+      box-sizing: border-box;
+
       li {
         display: flex;
         gap: 4px;
-        padding: 0px 8px;
+        padding: 0 8px;
         justify-content: center;
         align-items: center;
-        align-content: center;
         height: 100%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
         img {
           height: 25px;
+          object-fit: contain;
         }
+
         &:nth-of-type(2) {
           img {
             rotate: 180deg;
             opacity: 0.1;
           }
         }
+
         &:nth-of-type(3) {
           border-right: 1px solid #dfdbc9;
         }
+
         &:nth-of-type(5) {
           border-right: 1px solid #dfdbc9;
         }
       }
     }
+
     .file_address {
       display: flex;
       height: 30px;
+      flex-shrink: 0;
+
       p {
-        align-content: center;
+        display: flex;
+        align-items: center;
         height: 100%;
-        padding: 0px 8px;
+        margin: 0;
+        padding: 0 8px;
         font-size: 0.875em;
       }
     }
   }
+
   .inner {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
     width: 100%;
-    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+
     .item_list {
-      width: 100%;
-      height: 100%;
-      gap: 16px;
       display: flex;
       flex-wrap: wrap;
-      align-content: baseline;
-      padding: 16px;
-      padding-bottom: 80px;
+      align-content: flex-start;
+      gap: 16px;
+
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 16px 16px 80px;
+      list-style: none;
+      box-sizing: border-box;
+
       li {
         display: flex;
         flex-direction: column;
         gap: 4px;
         width: 80px;
+        flex-shrink: 0;
+        cursor: pointer;
+
         .icon_img_box {
           position: relative;
           display: flex;
           justify-content: center;
+          align-items: center;
           width: 100%;
           height: 50px;
+
           img {
+            max-width: 100%;
             height: 100%;
+            object-fit: contain;
           }
+
           .shotcutIcon {
             position: absolute;
             left: 10%;
-            bottom: 0px;
+            bottom: 0;
             width: 16px;
             height: 16px;
             background-image: url(${publicPath("/icon/shotcut.png")});
@@ -195,12 +278,19 @@ export const FolderModalWrap = styled(motion.div)`
             background-size: cover;
           }
         }
+
         .icon_text {
-          height: 20px;
+          min-height: 20px;
           text-align: center;
           color: #000;
+          overflow-wrap: anywhere;
+        }
+
+        &:hover {
+          background-color: #e7edff;
         }
       }
+
       .clickIcon {
         background-color: #5656d3;
       }
@@ -803,5 +893,16 @@ export const RunningModalWarp = styled.div`
         transform: translateX(1000%);
       }
     }
+  }
+`;
+
+export const MouseMenuWrapModalWrap = styled.ul`
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  li {
+    height: 25px;
+    padding: 0px 4px;
+    color: #000;
   }
 `;

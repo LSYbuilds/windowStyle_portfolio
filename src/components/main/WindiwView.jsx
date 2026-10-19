@@ -6,10 +6,11 @@ import IconData from "../../assets/data/IconData.json";
 import ToolsData from "../../assets/data/ToolsData.json";
 import { useNavigate } from "react-router-dom";
 
-const WindowView = () => {
+const WindowView = ({ handleMouseMenuOpen }) => {
   // 리덕스툴킷
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   // 아이콘데이터 가져오기(유지)
   const IconList = IconData.iconDataList;
   const [iconListData, setIconListData] = useState(IconList);

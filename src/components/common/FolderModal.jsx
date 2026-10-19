@@ -8,30 +8,49 @@ import {
 import { removeIconClickData } from "../../redux/iconClickSlice";
 import { FolderModalWrap } from "../../style/common/Modal_styled";
 import { motion, useDragControls } from "framer-motion";
+import { Resizable } from "re-resizable";
 
 const FolderModal = ({ setIsProgram, setThisProgramData }) => {
-  const defaultStyle = { width: "40%", height: "60%" };
-  const fullStyle = {
-    width: "100%",
-    height: "100%",
-    transform: "translate(267px, 55px)",
-    top: "0px",
-    left: "0px",
+  const defaultStyle = {
+    width: "30%",
+    height: "40%",
+    transform: "translateX(84px) translateY(324px)",
   };
-  // 리덕스
+  const fullStyle = {
+    width: "100vw",
+    height: "100vh",
+    transform: "translate(0, 0)",
+    top: 0,
+    left: 0,
+  };
+  스;
   const dispatch = useDispatch();
   // 아이콘 클릭 데이터 불러오기
   const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
   // 리덕스
   const [full, setFull] = useState(false);
   const dragControls = useDragControls();
+
   const [modalStyle, setModalStyle] = useState(defaultStyle);
+
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
+
+  const minimalfunc = () => {
+    dispatch(removeIconClickData());
+    dispatch(addBottomBar(clickIconIdx));
+    dispatch(removeBottomThis(clickIconIdx.title));
+  };
+
+  const closefunc = () => {
+    dispatch(removeIconClickData());
+    dispatch(removeBottomBar(clickIconIdx.title));
+    dispatch(removeBottomThis(clickIconIdx.title));
+  };
   return (
     <FolderModalWrap
-      drag
+      drag={!full}
       dragControls={dragControls}
       dragListener={false}
       dragMomentum={false}
@@ -52,14 +71,7 @@ const FolderModal = ({ setIsProgram, setThisProgramData }) => {
             <div className="folder_name">{clickIconIdx.title}</div>
           </div>
           <div className="folder_button">
-            <button
-              className="minimal"
-              onClick={() => {
-                dispatch(removeIconClickData());
-                dispatch(addBottomBar(clickIconIdx));
-                dispatch(removeBottomThis(clickIconIdx.title));
-              }}
-            ></button>
+            <button className="minimal" onClick={minimalfunc}></button>
             {full ? (
               <button
                 className="restore"
@@ -75,14 +87,7 @@ const FolderModal = ({ setIsProgram, setThisProgramData }) => {
                 }}
               ></button>
             )}
-            <button
-              className="close"
-              onClick={() => {
-                dispatch(removeIconClickData());
-                dispatch(removeBottomBar(clickIconIdx.title));
-                dispatch(removeBottomThis(clickIconIdx.title));
-              }}
-            ></button>
+            <button className="close" onClick={closefunc}></button>
           </div>
         </div>
         <div className="folder_funtion_bar">

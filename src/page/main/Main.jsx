@@ -9,6 +9,7 @@ import FolderModal from "../../components/common/folderModal";
 import ResumeModal from "../../components/common/ResumeModal";
 import RunningModal from "../../components/common/RunningModal";
 import WarningModal from "../../components/common/WarningModal";
+import MouseMenuModal from "../../components/common/MouseMenuModal";
 import Program from "../../page/main/Program";
 import { MainWrap } from "../../style/main/main_styled";
 import { retry } from "@reduxjs/toolkit/query";
@@ -17,6 +18,14 @@ const Main = ({ setThisProgramData }) => {
   // 아이콘데이터 가져오기(유지)
   const IconList = IconData.iconDataList;
   const navigate = useNavigate();
+
+  // 마우스클릭메뉴
+  const [mouseMenu, setMouseMenu] = useState({
+    open: false,
+    x: 0,
+    y: 0,
+  });
+
   // 프로그램데이터 가져오기
   const programData = ToolsData.toolsDataList;
   const [programDataList, setProgramDataList] = useState(programData);
@@ -101,6 +110,19 @@ const Main = ({ setThisProgramData }) => {
     }
   };
 
+  // 마우스오른쪽클릭 코드
+  const handleMouseMenuOpen = (e) => {
+    e.preventDefault();
+    setMouseMenu({
+      open: false,
+      x: 0,
+      y: 0,
+    });
+    if (mouseMenu.open === true) {
+      return <MouseMenuModal mouseMenu={mouseMenu}></MouseMenuModal>;
+    }
+  };
+
   console.log("이즈프로그램", isProgram);
   console.log("프로그램데이터", programDataList);
 
@@ -124,7 +146,10 @@ const Main = ({ setThisProgramData }) => {
       </AnimatePresence>
       {renderModal()}
       {renderProgramModal()}
-      <WindowView setThisProgramData={setThisProgramData} />
+      <WindowView
+        setThisProgramData={setThisProgramData}
+        handleMouseMenuOpen={handleMouseMenuOpen}
+      />
     </MainWrap>
   );
 };
