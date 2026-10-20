@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addBottomThis,
@@ -6,16 +6,19 @@ import {
 } from "../../redux/bottomBarClickSlice";
 import { addIconClickData } from "../../redux/iconClickSlice";
 import IconData from "../../assets/data/IconData.json";
+import QuickMenu from "../common/QuickMenu";
 import { removeBottomBar } from "../../redux/bottomBarSlice";
 import { WindowBottomWrap } from "../../style/main/windowBottom_styled";
 
 const WindowBottomBar = () => {
+  const [openStart, setOpenStart] = useState(false);
   // 리덕스툴킷
   const dispatch = useDispatch();
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
+
   const IconList = IconData.iconDataList;
   // 바텀 바 저장 데이터 불러오는것
   const openProgramIds = useSelector((state) => state.bottomBar.openProgramIds);
@@ -33,8 +36,9 @@ const WindowBottomBar = () => {
   return (
     <WindowBottomWrap>
       <div className="inner">
+        {openStart ? <QuickMenu /> : ""}
         <section className="quick_menu_box">
-          <div className="quick_menu">
+          <div className="quick_menu" onClick={() => setOpenStart(true)}>
             <div className="quick_img">
               <img src={publicPath("/bg/logo_clear.png")} alt="빠른메뉴로고" />
             </div>
