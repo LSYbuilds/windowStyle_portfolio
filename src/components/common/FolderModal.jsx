@@ -23,7 +23,6 @@ const FolderModal = ({ setIsProgram, setThisProgramData }) => {
     top: 0,
     left: 0,
   };
-  스;
   const dispatch = useDispatch();
   // 아이콘 클릭 데이터 불러오기
   const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
