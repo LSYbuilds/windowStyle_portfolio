@@ -36,7 +36,7 @@ const WindowBottomBar = () => {
   return (
     <WindowBottomWrap>
       <div className="inner">
-        {openStart ? <QuickMenu /> : ""}
+        {openStart ? <QuickMenu setOpenStart={setOpenStart} /> : ""}
         <section className="quick_menu_box">
           <div className="quick_menu" onClick={() => setOpenStart(true)}>
             <div className="quick_img">
