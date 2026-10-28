@@ -156,7 +156,8 @@
       "subtitle": "Internet Explorer",
       "src": "/icon/InternetExplorer.png",
       "func": "1",
-      "class": "file"
+      "class": "internet",
+      "address": "https://www.google.com/?hl=ko"
     },
     {
       "id": "2",
@@ -226,42 +227,42 @@
       "id": "11",
       "title": "제어판",
       "src": "/icon/ControlPanel.png",
-      "func": "1",
+      "func": "0",
       "class": "folder"
     },
     {
       "id": "12",
       "title": "기본 프로그램 설정",
       "src": "/icon/DefaultPrograms.png",
-      "func": "1",
+      "func": "0",
       "class": "folder"
     },
     {
       "id": "13",
       "title": "프린터 및 팩스",
       "src": "/icon/Networkprinter.png",
-      "func": "1",
+      "func": "0",
       "class": "folder"
     },
     {
       "id": "14",
       "title": "도움말 및 지원",
       "src": "/icon/HelpandSupport.png",
-      "func": "1",
+      "func": "0",
       "class": "folder"
     },
     {
       "id": "15",
       "title": "검색",
       "src": "/icon/Search.png",
-      "func": "1",
+      "func": "0",
       "class": "folder"
     },
     {
       "id": "16",
       "title": "실행",
       "src": "/icon/Run.png",
-      "func": "1",
+      "func": "0",
       "class": "folder"
     }
   ]

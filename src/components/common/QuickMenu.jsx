@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import IconData from "../../assets/data/IconData.json";
 import { QuickMenuWrap } from "../../style/main/quickMenu_styled";
+import WarningModal from "./WarningModal";
 
-const QuickMenu = ({ setOpenStart }) => {
+const QuickMenu = ({ setOpenStart, setSelectQuick, setIsQuickModal }) => {
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
@@ -10,6 +11,10 @@ const QuickMenu = ({ setOpenStart }) => {
   // 아이콘데이터 가져오기(유지)
   const IconList = IconData.quickMainList;
   const [iconListData, setIconListData] = useState(IconList);
+
+  const iconClassClick = (item) => {
+    if (item.func === "0") return <WarningModal />;
+  };
   return (
     <QuickMenuWrap
       onClick={(e) => {
@@ -27,14 +32,35 @@ const QuickMenu = ({ setOpenStart }) => {
           <div className="quick_left">
             <ul className="left_select_list">
               {iconListData.slice(0, 7).map((item, idx) => (
-                <li key={idx}>
-                  <div className="icon_img">
-                    <img src={publicPath(item.src)} alt="아이콘이미지" />
-                  </div>
-                  <div className="icon_name">
-                    <div className="title">{item.title}</div>
-                    <div className="sub_title">{item.subtitle}</div>
-                  </div>
+                <li
+                  key={idx}
+                  onClick={() => {
+                    (iconClassClick(item),
+                      setSelectQuick(item),
+                      setIsQuickModal(true));
+                  }}
+                >
+                  {item.class === "internet" ? (
+                    <a href={item.address} target="_blank">
+                      <div className="icon_img">
+                        <img src={publicPath(item.src)} alt="아이콘이미지" />
+                      </div>
+                      <div className="icon_name">
+                        <div className="title">{item.title}</div>
+                        <div className="sub_title">{item.subtitle}</div>
+                      </div>
+                    </a>
+                  ) : (
+                    <div className="icon_box">
+                      <div className="icon_img">
+                        <img src={publicPath(item.src)} alt="아이콘이미지" />
+                      </div>
+                      <div className="icon_name">
+                        <div className="title">{item.title}</div>
+                        <div className="sub_title">{item.subtitle}</div>
+                      </div>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
@@ -50,7 +76,14 @@ const QuickMenu = ({ setOpenStart }) => {
           <div className="quick_right">
             <ul className="right_select_list">
               {iconListData.slice(8, 16).map((item, idx) => (
-                <li key={idx}>
+                <li
+                  key={idx}
+                  onClick={() => {
+                    (iconClassClick(item),
+                      setSelectQuick(item),
+                      setIsQuickModal(true));
+                  }}
+                >
                   <div className="icon_img">
                     <img src={publicPath(item.src)} alt="아이콘이미지" />
                   </div>

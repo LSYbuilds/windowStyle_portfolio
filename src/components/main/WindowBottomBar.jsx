@@ -10,7 +10,7 @@ import QuickMenu from "../common/QuickMenu";
 import { removeBottomBar } from "../../redux/bottomBarSlice";
 import { WindowBottomWrap } from "../../style/main/windowBottom_styled";
 
-const WindowBottomBar = () => {
+const WindowBottomBar = ({ setSelectQuick, setIsQuickModal }) => {
   const [openStart, setOpenStart] = useState(false);
   // 리덕스툴킷
   const dispatch = useDispatch();
@@ -36,9 +36,20 @@ const WindowBottomBar = () => {
   return (
     <WindowBottomWrap>
       <div className="inner">
-        {openStart ? <QuickMenu setOpenStart={setOpenStart} /> : ""}
+        {openStart ? (
+          <QuickMenu
+            setOpenStart={setOpenStart}
+            setSelectQuick={setSelectQuick}
+            setIsQuickModal={setIsQuickModal}
+          />
+        ) : (
+          ""
+        )}
         <section className="quick_menu_box">
-          <div className="quick_menu" onClick={() => setOpenStart(true)}>
+          <div
+            className="quick_menu"
+            onClick={() => setOpenStart((props) => !props)}
+          >
             <div className="quick_img">
               <img src={publicPath("/bg/logo_clear.png")} alt="빠른메뉴로고" />
             </div>

@@ -132,6 +132,7 @@ const Main = ({ setThisProgramData }) => {
     }, 100);
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <MainWrap>
       <AnimatePresence>

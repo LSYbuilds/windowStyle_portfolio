@@ -78,18 +78,38 @@ export const QuickMenuWrap = styled.div`
           display: flex;
           flex-direction: column;
           li {
-            display: flex;
             gap: 16px;
             height: 60px;
-            align-items: center;
             padding: 8px 16px;
             cursor: pointer;
-            .icon_img {
-              width: 50px;
-              height: 50px;
-              img {
-                width: 100%;
-                height: 100%;
+            a {
+              display: flex;
+              gap: 16px;
+              width: 100%;
+              align-items: center;
+              height: 100%;
+              .icon_img {
+                width: 50px;
+                height: 50px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            .icon_box {
+              display: flex;
+              gap: 16px;
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              .icon_img {
+                width: 50px;
+                height: 50px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
               }
             }
             &:hover {
