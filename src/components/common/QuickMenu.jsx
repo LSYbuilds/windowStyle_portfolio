@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addIconClickData } from "../../redux/iconClickSlice";
 import IconData from "../../assets/data/IconData.json";
 import { QuickMenuWrap } from "../../style/main/quickMenu_styled";
 import WarningModal from "./WarningModal";
 
-const QuickMenu = ({ setOpenStart, setSelectQuick, setIsQuickModal }) => {
+const QuickMenu = ({ setOpenStart, openQuickModal }) => {
+  // 리덕스툴킷
+  const dispatch = useDispatch();
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
@@ -35,9 +39,8 @@ const QuickMenu = ({ setOpenStart, setSelectQuick, setIsQuickModal }) => {
                 <li
                   key={idx}
                   onClick={() => {
-                    (iconClassClick(item),
-                      setSelectQuick(item),
-                      setIsQuickModal(true));
+                    dispatch(addIconClickData(item));
+                    openQuickModal();
                   }}
                 >
                   {item.class === "internet" ? (
@@ -79,9 +82,8 @@ const QuickMenu = ({ setOpenStart, setSelectQuick, setIsQuickModal }) => {
                 <li
                   key={idx}
                   onClick={() => {
-                    (iconClassClick(item),
-                      setSelectQuick(item),
-                      setIsQuickModal(true));
+                    dispatch(addIconClickData(item));
+                    openQuickModal();
                   }}
                 >
                   <div className="icon_img">

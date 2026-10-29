@@ -23,30 +23,36 @@ const FolderModal = ({ setIsProgram, setThisProgramData }) => {
     top: 0,
     left: 0,
   };
+  const [full, setFull] = useState(false);
+  const [modalStyle, setModalStyle] = useState(defaultStyle);
+
   const dispatch = useDispatch();
   // 아이콘 클릭 데이터 불러오기
+  const dragControls = useDragControls();
+  // 드래그컨트롤
+
   const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
   // 리덕스
-  const [full, setFull] = useState(false);
-  const dragControls = useDragControls();
-
-  const [modalStyle, setModalStyle] = useState(defaultStyle);
 
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
   };
+  // 정규식
 
   const minimalfunc = () => {
     dispatch(removeIconClickData());
     dispatch(addBottomBar(clickIconIdx));
     dispatch(removeBottomThis(clickIconIdx.title));
   };
+  // 최소화기능
 
   const closefunc = () => {
     dispatch(removeIconClickData());
     dispatch(removeBottomBar(clickIconIdx.title));
     dispatch(removeBottomThis(clickIconIdx.title));
   };
+  // 폴더끄기 기능
+
   return (
     <FolderModalWrap
       drag={!full}
@@ -65,7 +71,6 @@ const FolderModal = ({ setIsProgram, setThisProgramData }) => {
           <div className="icon_name">
             <div className="icon_img">
               <img src={publicPath(clickIconIdx.src)} alt="" />
-              {/* <img src={publicPath(clickData.src)} alt="폴더이미지" /> */}
             </div>
             <div className="folder_name">{clickIconIdx.title}</div>
           </div>

@@ -6,7 +6,7 @@ import IconData from "../../assets/data/IconData.json";
 import ToolsData from "../../assets/data/ToolsData.json";
 import { useNavigate } from "react-router-dom";
 
-const WindowView = ({ handleMouseMenuOpen }) => {
+const WindowView = ({ openWindowModal }) => {
   // 리덕스툴킷
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -38,6 +38,7 @@ const WindowView = ({ handleMouseMenuOpen }) => {
               setIconClickIndex(idx);
             }}
             onDoubleClick={() => {
+              openWindowModal();
               dispatch(addIconClickData(item));
             }}
             className={iconClickIndex === idx ? "clickIcon" : ""}

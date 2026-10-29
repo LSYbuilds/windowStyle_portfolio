@@ -10,22 +10,22 @@ import ResumeModal from "../../components/common/ResumeModal";
 import RunningModal from "../../components/common/RunningModal";
 import WarningModal from "../../components/common/WarningModal";
 import MouseMenuModal from "../../components/common/MouseMenuModal";
+import { useOutletContext } from "react-router-dom";
 import Program from "../../page/main/Program";
 import { MainWrap } from "../../style/main/main_styled";
 import { retry } from "@reduxjs/toolkit/query";
 const Main = ({ setThisProgramData }) => {
   const [fadeAnime, setFadeAnime] = useState(true);
-  // 아이콘데이터 가져오기(유지)
-  const IconList = IconData.iconDataList;
-  const navigate = useNavigate();
 
-  // 마우스클릭메뉴
-  const [mouseMenu, setMouseMenu] = useState({
-    open: false,
-    x: 0,
-    y: 0,
-  });
+  // // 마우스클릭메뉴
+  // const [mouseMenu, setMouseMenu] = useState({
+  //   open: false,
+  //   x: 0,
+  //   y: 0,
+  // });
 
+  // 아웃렛컨텍스트
+  const { openWindowModal } = useOutletContext();
   // 프로그램데이터 가져오기
   const programData = ToolsData.toolsDataList;
   const [programDataList, setProgramDataList] = useState(programData);
@@ -40,26 +40,26 @@ const Main = ({ setThisProgramData }) => {
   // 아이콘 클릭 데이터 불러오기
   const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
 
-  const renderModal = () => {
-    if (!clickIconIdx) return null;
-    if (clickIconIdx) {
-      switch (clickIconIdx.class) {
-        case "folder":
-          return <FolderModal />;
-        case "file":
-          switch (clickIconIdx.detail) {
-            case "picture":
-              return null;
-            case "word":
-              return <ResumeModal />;
-            default:
-              return null;
-          }
-        default:
-          return null;
-      }
-    }
-  };
+  // const renderModal = () => {
+  //   if (!clickIconIdx) return null;
+  //   if (clickIconIdx) {
+  //     switch (clickIconIdx.class) {
+  //       case "folder":
+  //         return <FolderModal />;
+  //       case "file":
+  //         switch (clickIconIdx.detail) {
+  //           case "picture":
+  //             return null;
+  //           case "word":
+  //             return <ResumeModal />;
+  //           default:
+  //             return null;
+  //         }
+  //       default:
+  //         return null;
+  //     }
+  //   }
+  // };
 
   // 폴더 및 파일 모달창 코드
   // const renderModal = () => {
@@ -145,12 +145,9 @@ const Main = ({ setThisProgramData }) => {
           />
         )}
       </AnimatePresence>
-      {renderModal()}
-      {renderProgramModal()}
-      <WindowView
-        setThisProgramData={setThisProgramData}
-        handleMouseMenuOpen={handleMouseMenuOpen}
-      />
+      {/* {renderModal()}
+      {renderProgramModal()} */}
+      <WindowView openWindowModal={openWindowModal} />
     </MainWrap>
   );
 };

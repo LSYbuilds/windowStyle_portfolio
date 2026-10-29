@@ -1,37 +1,80 @@
 import React, { use, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import WindowBottomBar from "../main/WindowBottomBar";
 import WarningModal from "../common/WarningModal";
+import FolderModal from "../common/folderModal";
 
 const Mainlayout = () => {
-  const [selectQuick, setSelectQuick] = useState(null);
-  // 모달(프로그램실행) 스테이트
+  // 모달(빠른메뉴) 스테이트
   const [isQuickModal, setIsQuickModal] = useState(false);
-  console.log("빠른선택메뉴", selectQuick);
+  // 모달(윈도우) 스테이트
+  const [isWindowModal, setIsWindowModal] = useState(false);
+  // 아이콘 클릭 데이터 스테이트
+  const clickIconIdx = useSelector((state) => state.iconClick.openIconClickIdx);
 
-  const quickRenderModal = () => {
-    if (!isQuickModal) return null;
-    if (selectQuick && isQuickModal) {
-      switch (selectQuick.func) {
-        case "0":
-          return <WarningModal setIsQuickModal={setIsQuickModal} />;
-        case "1":
+  // console.log("빠른선택메뉴", clickIconIdx);
 
-        default:
-          return null;
-      }
+  const openQuickModal = () => {
+    setIsQuickModal(true);
+    setIsWindowModal(false);
+  };
+
+  const openWindowModal = () => {
+    setIsWindowModal(true);
+    setIsQuickModal(false);
+  };
+
+  // 빠른선택에서 눌렀을시 나오는 모달
+  const renderModal = () => {
+    if (!clickIconIdx) return null;
+
+    switch (clickIconIdx.func) {
+      case "0":
+        return (
+          <WarningModal
+            setIsQuickModal={setIsQuickModal}
+            setIsWindowModal={setIsWindowModal}
+          />
+        );
+
+      case "1":
+        if (clickIconIdx.class === "folder") {
+          return <FolderModal />;
+        }
+        return null;
+
+      default:
+        return null;
     }
   };
+
+  // const windowRenderModal = () => {
+  //   if (!isWindowModal || !clickIconIdx) return null;
+  //   switch (clickIconIdx.func) {
+  //     case "0":
+  //       return <WarningModal setIsQuickModal={setIsQuickModal} />;
+
+  //     case "1":
+  //       switch (clickIconIdx.class) {
+  //         case "folder":
+  //           return <FolderModal />;
+
+  //         default:
+  //           return null;
+  //       }
+
+  //     default:
+  //       return null;
+  //   }
+  // };
   return (
     <>
       <main>
-        <Outlet />
-        {quickRenderModal()}
+        <Outlet context={{ openWindowModal }} />
+        {renderModal()}
       </main>
-      <WindowBottomBar
-        setSelectQuick={setSelectQuick}
-        setIsQuickModal={setIsQuickModal}
-      />
+      <WindowBottomBar setIsQuickModal={setIsQuickModal} />
     </>
   );
 };

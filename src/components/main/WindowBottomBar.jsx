@@ -10,7 +10,7 @@ import QuickMenu from "../common/QuickMenu";
 import { removeBottomBar } from "../../redux/bottomBarSlice";
 import { WindowBottomWrap } from "../../style/main/windowBottom_styled";
 
-const WindowBottomBar = ({ setSelectQuick, setIsQuickModal }) => {
+const WindowBottomBar = ({ openQuickModal }) => {
   const [openStart, setOpenStart] = useState(false);
   // 리덕스툴킷
   const dispatch = useDispatch();
@@ -39,8 +39,7 @@ const WindowBottomBar = ({ setSelectQuick, setIsQuickModal }) => {
         {openStart ? (
           <QuickMenu
             setOpenStart={setOpenStart}
-            setSelectQuick={setSelectQuick}
-            setIsQuickModal={setIsQuickModal}
+            openQuickModal={openQuickModal}
           />
         ) : (
           ""
