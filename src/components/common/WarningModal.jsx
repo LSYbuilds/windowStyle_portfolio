@@ -1,10 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { removeIconClickData } from "../../redux/iconClickSlice";
 import { WarningModalWrap } from "../../style/common/Modal_styled";
 
 const WarningModal = ({ setIsQuickModal }) => {
   // 정규식
   const publicPath = (path) => {
     return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+  };
+  // 리덕스
+  const dispatch = useDispatch();
+
+  const closefunc = () => {
+    dispatch(removeIconClickData());
   };
   return (
     <WarningModalWrap>
@@ -13,7 +21,7 @@ const WarningModal = ({ setIsQuickModal }) => {
           <p>Windows XP</p>
           <button
             className="close_btn"
-            onClick={() => setIsQuickModal(false)}
+            onClick={() => setIsQuickModal()}
           ></button>
         </div>
         <div className="content">
@@ -28,7 +36,7 @@ const WarningModal = ({ setIsQuickModal }) => {
           </div>
         </div>
         <div className="button_area">
-          <button className="ok_btn" onClick={() => setIsQuickModal(false)}>
+          <button className="ok_btn" onClick={closefunc}>
             확인
           </button>
         </div>

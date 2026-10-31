@@ -28,15 +28,9 @@ const Mainlayout = () => {
   // 빠른선택에서 눌렀을시 나오는 모달
   const renderModal = () => {
     if (!clickIconIdx) return null;
-
     switch (clickIconIdx.func) {
       case "0":
-        return (
-          <WarningModal
-            setIsQuickModal={setIsQuickModal}
-            setIsWindowModal={setIsWindowModal}
-          />
-        );
+        return <WarningModal />;
 
       case "1":
         if (clickIconIdx.class === "folder") {
@@ -74,7 +68,7 @@ const Mainlayout = () => {
         <Outlet context={{ openWindowModal }} />
         {renderModal()}
       </main>
-      <WindowBottomBar setIsQuickModal={setIsQuickModal} />
+      <WindowBottomBar openQuickModal={openQuickModal} />
     </>
   );
 };
